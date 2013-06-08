@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<div class="formContent">
+	<div style="padding-bottom:10px;"> 
+		Thank you for helping us develop new content at Educator Lab. You can use this form to submit ideas for a new resource. Try to be as detailed as possible, but if not, give us an outline of what you want to accomplish with this resource. Our content and style editors can format and expand on the idea. Please note: we cannot guarantee that your resource will be included in this site.
+	</div>
+
+<ul class="nav nav-list">
+	<li class="divider"></li>	
+</ul>
+
+{% if "Thanks" in message %}
+<span class="label label-success">{{message}}</span>
+{% else %}
+<span class="label label-error">{{message}}</span>
+{% endif %}
+
+{% if email_form %}
+<form method="POST" action ="." enctype="multipart/form-data" style="padding-left:15px">
+{% csrf_token %}  
+
+{{ email_form.non_field_errors }}
+<div style="display:table; margin:0 auto;">
+<div class="formLineElement">
+	<span style="color:red">
+		{{ email_form.curriculum.errors }}
+	</span>
+	<label for="id_curriculum">Curriculum</label> 
+	{{ email_form.curriculum }}
+</div>
+
+<div class="formLineElement">
+	<span style="color:red">
+		{{ email_form.subject.errors }}
+	</span>
+	<label for="id_subject">Subject</label>
+	{{ email_form.subject }}
+</div>
+
+
+<div class="formLineElement">
+	<span style="color:red">	
+		{{ email_form.grade.errors }}
+	</span>
+	<label for="id_grade">Grade</label>
+	{{ email_form.grade }}
+</div> 
+
+
+<div class="formLineElement">
+	<span style="color:red">	
+		{{ email_form.chapter.errors }}
+	</span>
+	<label for="id_chapter">Chapter</label>
+	{{ email_form.chapter }}
+</div>
+</div>
+
+<div style="display:table; margin:0 auto;"> 
+<div class="formLineElement"> 
+	{{ email_form.goals.errors }}
+	<label for="id_goals">Goals</label>
+	{{ email_form.goals }}
+</div>
+</div>
+
+<div style="display:table; margin:0 auto;">
+<div class="formLineElement">
+	<span style="color:red">
+		{{ email_form.resource.errors }}
+	</span>
+	<label for="id_resource">Resource</label>
+	{{ email_form.resource }}
+</div>
+</div>
+
+<div style="display:table; margin:0 auto; width:100%; position:relative;">
+<div style="position:absolute;top:10px;left:100px;">
+<div class="formLineElement" style="float:left;">
+        <span style="color:red">
+		{{ email_form.attachment.errors }}
+        </span>
+	<label for="id_attachment1">Attachment 1</label>{{ email_form.attachment }}
+</div>
+<div class="formLineElement" style="float:left">
+        <span style="color:red">
+		{{ email_form.attachment.errors }}
+        </span>
+	<label for="id_attachment2">Attachment 2</label> {{ email_form.attachment }}
+</div>
+</div>
+<div class="formLineElement" style="position:absolute;top:30px;right:100px;">
+	<button type="submit" class="btn btn-danger" name="submit"> Submit </button>
+</div>
+</div>
+<br><br><br><br>
+</form>
+</div>
+{% endif %}
+{% endblock content %}

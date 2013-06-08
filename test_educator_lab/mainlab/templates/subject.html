@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% if titleTag != "" %}
+	<title>{{titleTag}}</title>
+{% else %}
+	<title> {{subject}} | {{curriculum}} Grade {{grade}} | Educator Lab </title>
+{% endif %}
+{% endblock title %}
+
+
+{% block content %}
+
+<!-- <div id="breadCrumbs">
+	<a href="{{site_url}}curriculum/i={{curID}}/" class="crumbLink">{{curriculum}}</a> >> 
+	<a href="{{site_url}}grade/i={{graID}}/" class="crumbLink">Grade {{grade}}</a> >> 
+	<span class="crumbCurrent">{{subject}}</span>
+</div> -->
+
+<ul class="breadcrumb">
+  <li><a href="{{site_url}}curriculum/i={{curID}}/">{{curriculum}}</a> <span class="divider">/</span></li>
+  <li><a href="{{site_url}}grade/i={{graID}}/">Grade {{grade}}</a> <span class="divider">/</span></li>
+  <li class="active">{{subject}}</li>
+</ul>
+
+<div class="text-center"><div id="mainList">
+<div style="color:#ad1d28;font-size:large">Select Chapter</div><br>
+{% for c in chapters %}
+	<a href="{{site_url}}chapter/i={{c.id}}/" class="mainLink"> {{c.title}} </a> <br><br>
+{% endfor %}
+</div></div>
+
+{% endblock content %}
+
+

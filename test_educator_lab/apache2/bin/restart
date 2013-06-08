@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/home/sumitasami/webapps/test_educator_lab/apache2/bin/stop
+sleep 5
+/home/sumitasami/webapps/test_educator_lab/apache2/bin/start

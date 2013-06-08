@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title> Browse Educator Resources for Indian Curricula | Educator Lab</title>
+{% endblock title %}
+
+{% block content %}
+
+<div class="text-center"><div id="mainList">
+<div style="color:#ad1d28;padding-top:40px;font-size:large">Select Curriculum</div><br>
+{% for c in curricula %}
+	<a href="{{site_url}}curriculum/i={{c.id}}/" class="mainLink"> {{c.title}} </a> <br><br>
+{% endfor %}
+</div></div>
+
+{% endblock content %}
