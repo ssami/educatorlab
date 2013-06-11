@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
 
+<head>
 
+{% comment %}
+{{ email_form.media }}
+{% endcomment %}
+
+{% block script %}
+<script type="text/javascript" src="/static/tiny_mce/tiny_mce.js"></script>
+{% endblock script %}
+
+</head>
 
 {% block content %}
 <div class="formContent">
@@ -61,19 +71,19 @@
 
 <div style="display:table; margin:0 auto;"> 
 <div class="formLineElement"> 
-	{{ email_form.goals.errors }}
-	<label for="id_goals">Goals</label>
-	{{ email_form.goals }}
+	{{ email_form.activityGoals.errors }}
+	<label for="id_goals">Activity Goals</label>
+	{{ email_form.activityGoals }}
 </div>
 </div>
 
 <div style="display:table; margin:0 auto;">
 <div class="formLineElement">
 	<span style="color:red">
-		{{ email_form.resource.errors }}
+		{{ email_form.resourceDetails.errors }}
 	</span>
-	<label for="id_resource">Resource</label>
-	{{ email_form.resource }}
+	<label for="id_resource">Resource Details</label>
+	{{ email_form.resourceDetails }}
 </div>
 </div>
 

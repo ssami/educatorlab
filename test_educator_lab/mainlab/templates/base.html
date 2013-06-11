@@ -159,6 +159,9 @@
 			</div>
 		</div>
 	</form>
+	<div class="text-center">
+		<a href="#" onClick="$('#loginModal').modal('hide');$('#forgotModal').modal('show');">Forgot your password?</a>
+	</div>
   </div>
   <div class="modal-footer">
     <button class="btn btn-danger" onClick="siteLogin()">Log In</button>
@@ -210,6 +213,16 @@
     <button class="btn btn-danger" onClick="register()">Sign Up</button>
   </div>
 </div>
+
+<div id="forgotModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true"  style="display:none">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="loginModalLabel">Reset Password</h3>
+  </div>
+  <div class="modal-body">
+	<iframe style="width:530px;height:150px;border:none;" src="{% url 'django.contrib.auth.views.password_reset' %}"></iframe>
+  </div>
+</div>
 {% endif %}
 
 <div class="searchPop" id="searchPop">
@@ -254,7 +267,7 @@
 	<div class="footbar-inner">
 		<ul class="foot">
 			<li><a href='{{site_url}}about'>About</a></li>
-			<li><a href='mailto:sumita.sami@gmail.com'>Contact</a></li>
+			<li><a href='mailto:educatorlab.gmail.com'>Contact</a></li>
 		</ul>
 	</div>
 </div>

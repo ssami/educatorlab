@@ -66,7 +66,15 @@ class CustomIndexDashboard(Dashboard):
 			column=1,
 			models =('mainlab.models.MyUser','mainlab.models.Comment',),
 		))
+		
+		self.children.append(modules.ModelList(
+			title = "Ratings",
+			collapsible=True,
+			column=1,
+			models =('djangoratings.models.Vote','djangoratings.models.Score',),
+		))
         
+		
         # append a recent actions module
 		self.children.append(modules.RecentActions(
 			_('Recent Actions'),

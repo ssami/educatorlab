@@ -3,9 +3,19 @@
 
 <script type="text/javascript">
 	
-	{% if VoteExists %}
+	{% if voteValue != None %}
 	$(document).ready(function () {
 		$('#star').raty({
+			score     : function() {
+							return $(this).attr('data-score');
+						},
+			readOnly  : true,
+			size      : 24,
+			starHalf  : '/media/images/star-half-big.png',
+			starOff   : '/media/images/star-off-big.png',
+			starOn    : '/media/images/star-on-big.png'
+		});
+		$('#starRead').raty({
 			score     : function() {
 							return $(this).attr('data-score');
 						},
@@ -25,6 +35,16 @@
 			click	  : function(score, evt) {
 							Dajaxice.mainlab.rateResource(Dajax.process,{'type':'p', 'id':'{{project.id}}', 'rating':score});
 						},
+			size      : 24,
+			starHalf  : '/media/images/star-half-big.png',
+			starOff   : '/media/images/star-off-big.png',
+			starOn    : '/media/images/star-on-big.png'
+		});
+		$('#starRead').raty({
+			score     : function() {
+							return $(this).attr('data-score');
+						},
+			readOnly  : true,
 			size      : 24,
 			starHalf  : '/media/images/star-half-big.png',
 			starOff   : '/media/images/star-off-big.png',
@@ -74,7 +94,7 @@
 
 	<div class="resourceContent">
 		<h4>{{project.title|safe}}</h4> <br>
-		<span id="star" data-score="{{starRate}}"></span><span id="numVotes" style="padding-left:7px;padding-top:6px;font-size:16px;">({{project.rating.votes}})</span><br><br> 
+		<span id="starRead" data-score="{{starRate}}"></span><span id="numVotes" style="padding-left:7px;padding-top:6px;font-size:16px;">({{project.rating.votes}})</span><br><br> 
 		<h5>Goals:</h5>
 		{{project.goals|safe}} <br>
 		<h5>Time Required:</h5>
@@ -88,13 +108,27 @@
 		
 		<div class="authorDet">{% if project.author != None %}Resource contributed by {{project.author.name}}{% endif %}</div>
 	
+		<ul class="media-list" style="position:relative;margin-bottom:0px;">
+			<li class="media">
+				<div class="media-body">
+					{% if voteValue == None %}
+						<h4 style="float:left;">How do you rate this resource?</h4>
+						<span id="star" data-score="{{voteValue}}" style="position:absolute;top:15px;left:250px;"></span><br>
+					{% else %}
+						<h4 style="float:left;">You rated this</h4> 
+						<span id="star" data-score="{{voteValue}}" style="position:absolute;top:15px;left:130px;"></span><br>
+					{% endif %}
+				</div>
+			</li>
+		</ul>
+	
 		<ul class="media-list" id="commentsList">
 			<li class="media">
-				<div class="media-body" id="noOfComments">
+				<div class="text-right" id="noOfComments">
 					{% if noOfComments == 1 %}
-					<h4>{{noOfComments}} Comment:</h4>
+					<h5>{{noOfComments}} Comment</h5>
 					{% else %}
-					<h4>{{noOfComments}} Comments:</h4>
+					<h5>{{noOfComments}} Comments</h5>
 					{% endif %}
 				</div>
 			</li>

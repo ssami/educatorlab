@@ -147,9 +147,9 @@ def addComment(request, type, id, comment):
 	
 	noOfComments = resource.comment_set.count()
 	if noOfComments == 1:
-		dajax.assign('#noOfComments', 'innerHTML', '<h4>1 Comment:</h4>')
+		dajax.assign('#noOfComments', 'innerHTML', '<h5>1 Comment</h5>')
 	else:
-		dajax.assign('#noOfComments', 'innerHTML', '<h4>' + str(noOfComments) + ' Comments:</h4>')
+		dajax.assign('#noOfComments', 'innerHTML', '<h5>' + str(noOfComments) + ' Comments</h5>')
 		
 	dajax.assign('#commentBox', 'value', '')
 
@@ -165,15 +165,16 @@ def rateResource(request, type, id, rating):
 		resource = Project.objects.get(pk=id)
 	elif type == "o":
 		resource = Organizer.objects.get(pk=id)
-	#dajax.assign('#TestCon','innerHTML','Working so far')
 	#resource.rating.add(rating, request.user, request.META['REMOTE_ADDR'], request.COOKIES)
 	
-	resource.rating.add(rating, None, request.META['REMOTE_ADDR'])
-	#resource.rating.add(rating, None, '127.0.1.1')
-	
-	scriptStr = "$('#star').raty('score', " + str(resource.rating.get_real_rating()) + ");"
-	#scriptStr = "$('#star').raty();"
+	if request.user.is_authenticated():
+		resource.rating.add(rating, request.user, request.META['REMOTE_ADDR'])
+	else:
+		resource.rating.add(rating, None, request.META['REMOTE_ADDR'])
+	dajax.script("$('#starRead').raty('readOnly', false);")
+	scriptStr = "$('#starRead').raty('score', " + str(resource.rating.get_real_rating()) + ");"
 	dajax.script(scriptStr)
+	dajax.script("$('#starRead').raty('readOnly', true);")
 	dajax.script("$('#star').raty('readOnly', true);")
 	dajax.assign('#numVotes','innerHTML',"("+str(resource.rating.votes)+")")
 	

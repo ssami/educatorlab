@@ -4,9 +4,19 @@
 
 <script type="text/javascript">
 	
-	{% if VoteExists %}
+	{% if voteValue != None %}
 	$(document).ready(function () {
 		$('#star').raty({
+			score     : function() {
+							return $(this).attr('data-score');
+						},
+			readOnly  : true,
+			size      : 24,
+			starHalf  : '/media/images/star-half-big.png',
+			starOff   : '/media/images/star-off-big.png',
+			starOn    : '/media/images/star-on-big.png'
+		});
+		$('#starRead').raty({
 			score     : function() {
 							return $(this).attr('data-score');
 						},
@@ -31,15 +41,27 @@
 			starOff   : '/media/images/star-off-big.png',
 			starOn    : '/media/images/star-on-big.png'
 		});
+		$('#starRead').raty({
+			score     : function() {
+							return $(this).attr('data-score');
+						},
+			readOnly  : true,
+			size      : 24,
+			starHalf  : '/media/images/star-half-big.png',
+			starOff   : '/media/images/star-off-big.png',
+			starOn    : '/media/images/star-on-big.png'
+		});
 	});
 	{% endif %}
 	
+	{% if request.user.is_authenticated %}
 	function postComment(){
 		comment = $('#commentBox').val();
 		if(comment != ""){
 			Dajaxice.mainlab.addComment(Dajax.process,{'type':'a', 'id':'{{activity.id}}', 'comment':comment})
 		}
     }
+	{% endif %}
 </script>
 {% endblock script %}
 
@@ -52,13 +74,11 @@
 {% endblock title %}
 
 {% block content %}
-
 	<ul class="breadcrumb">
 		<li><a href="{{site_url}}curriculum/i={{curID}}/">{{curriculum}}</a> <span class="divider">/</span></li>
 		<li><a href="{{site_url}}grade/i={{graID}}/">Grade {{grade}}</a> <span class="divider">/</span></li>
 		<li><a href="{{site_url}}subject/i={{subID}}/">{{subject}}</a> <span class="divider">/</span></li>
 		<li><a href="{{site_url}}chapter/i={{chaID}}/">{{chapter}}</a> <span class="divider">/</span></li>
-		<!-- <li class="active">{{activity.title}}</li> -->
 		<li class="dropdown">
 			<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
 				{{activity.title}}
@@ -74,7 +94,7 @@
 
 	<div class="resourceContent">
 		<h4>{{activity.title|safe}}</h4>
-		<span id="star" data-score="{{starRate}}"></span><span id="numVotes" style="padding-left:7px;padding-top:6px;font-size:16px;">({{activity.rating.votes}})</span><br><br> 
+		<span id="starRead" data-score="{{starRate}}"></span><span id="numVotes" style="padding-left:7px;padding-top:6px;font-size:16px;">({{activity.rating.votes}})</span><br><br>
 		<h5>Goals:</h5>
 		{{activity.goals|safe}} <br>
 		<h5>Time Required:</h5>
@@ -84,14 +104,28 @@
 		{{activity.lesson|safe}} <br>
 	
 		<div class="authorDet">{% if activity.author != None %}Resource contributed by {{activity.author.name}}{% endif %}</div>
-	
+		
+		<ul class="media-list" style="position:relative;margin-bottom:0px;">
+			<li class="media">
+				<div class="media-body">
+					{% if voteValue == None %}
+						<h4 style="float:left;">How do you rate this resource?</h4>
+						<span id="star" data-score="{{voteValue}}" style="position:absolute;top:15px;left:250px;"></span><br>
+					{% else %}
+						<h4 style="float:left;">You rated this</h4> 
+						<span id="star" data-score="{{voteValue}}" style="position:absolute;top:15px;left:130px;"></span><br>
+					{% endif %}
+				</div>
+			</li>
+		</ul>
+
 		<ul class="media-list" id="commentsList">
 			<li class="media">
-				<div class="media-body" id="noOfComments">
+				<div class="text-right" id="noOfComments">
 					{% if noOfComments == 1 %}
-					<h4>{{noOfComments}} Comment:</h4>
+					<h5>{{noOfComments}} Comment</h5>
 					{% else %}
-					<h4>{{noOfComments}} Comments:</h4>
+					<h5>{{noOfComments}} Comments</h5>
 					{% endif %}
 				</div>
 			</li>
@@ -122,42 +156,37 @@
 	{% if files %}
 	<div class="sideBox">
 		<h5>Student Handouts</h5>
-			{% for f in files %}
-				<a class='attachment' target='_blank' href='{{f.doc.url}}'>
-					<!-- <img class='attImage' src='/media/images/{{f.extension}}.png'> -->
-					<img class='attImageTall' src='/media/images/handout.png'>
-					<div class='attText'>{{f.title}}</div>
-				</a>
-			{% endfor %}
+		{% for f in files %}
+			<a class='attachment' target='_blank' href='{{f.doc.url}}'>
+				<img class='attImageTall' src='/media/images/handout.png'>
+				<div class='attText'>{{f.title}}</div>
+			</a>
+		{% endfor %}
 	</div>
 	{% endif %}
 	
-
 	{% if foldables %}
-		<div class="sideBox"> 
-			<h5>Foldables</h5>
-			{% for fd in foldables %}
-				<a class='attachment' target='_blank' href='{{fd.image.url}}'>
-					<img class='attImageTall' src='/media/images/foldable.png'>
-					<div class='attText'>{{fd.title}}</div>
-				</a>
-			{% endfor %}
-		</div>
+	<div class="sideBox"> 
+		<h5>Foldables</h5>
+		{% for fd in foldables %}
+			<a class='attachment' target='_blank' href='{{fd.image.url}}'>
+				<img class='attImageTall' src='/media/images/foldable.png'>
+				<div class='attText'>{{fd.title}}</div>
+			</a>
+		{% endfor %}
+	</div>
 	{% endif %}
-
-
 
 	{% if graphicOrgs %}
-	 	<div class="sideBox">
-                	<h5>Graphic Organizers</h5>
-                	{% for g in graphicOrgs %}
-                        	<a class='attachment' target='_blank' href='{{g.file.url}}'>
-                                	<img class='attImageTall' src='/media/images/graphic_org.png'>
-                                	<div class='attText'>{{g.title}}</div>
-                        	</a>
-	                {% endfor %}
-        	</div>
+	<div class="sideBox">
+		<h5>Graphic Organizers</h5>
+		{% for g in graphicOrgs %}
+           `<a class='attachment' target='_blank' href='{{g.file.url}}'>
+               `<img class='attImageTall' src='/media/images/graphic_org.png'>
+              `	<div class='attText'>{{g.title}}</div>
+			</a>
+		{% endfor %}
+	</div>
 	{% endif %}
-	
 	
 {% endblock content %}

@@ -10,11 +10,7 @@ from mainlab.models import Curriculum, Grade, Subject, Chapter, Activity, Projec
 from format import FormatEmail
 from forms import EmailForm, DivErrorList
 
-#from models import Curriculum
-
-def index(request):
-	context = RequestContext(request)
-	
+def base(context):								# function to handle code that is common to most views
 	curricula = []
 	for c in Curriculum.objects.all():
 		attributes = {}
@@ -22,76 +18,45 @@ def index(request):
 		attributes['id'] = c.id		
 		curricula.append(attributes)
 	context['curricula'] = curricula
-	
 	context['site_url'] = settings.SITE_URL
+	return context
+
+def index(request):
+	context = RequestContext(request)
+	context = base(context)	
 	return render_to_response('index.html',{},context)
 	
 def about(request):
 	context = RequestContext(request)
-	
-	curricula = []
-	for c in Curriculum.objects.all():
-		attributes = {}
-		attributes['title'] = c.title
-		attributes['id'] = c.id		
-		curricula.append(attributes)
-	context['curricula'] = curricula
-	
-	context['site_url'] = settings.SITE_URL
+	context = base(context)
 	return render_to_response('about.html', {}, context)
 
 def contrib(request):
 	context = RequestContext(request)
-	
-	curricula = []
-        for c in Curriculum.objects.all():
-                attributes = {}
-                attributes['title'] = c.title
-                attributes['id'] = c.id
-                curricula.append(attributes)
-        context['curricula'] = curricula
-
-        context['site_url'] = settings.SITE_URL
-	
+	context = base(context)
 	return render_to_response('contrib_form.html', {}, context)
 
 
 def browse(request):
 	context = RequestContext(request)
-	
-	curricula = []
-	for c in Curriculum.objects.all():
-		attributes = {}
-		attributes['title'] = c.title
-		attributes['id'] = c.id		
-		curricula.append(attributes)
-	context['curricula'] = curricula
-	
-	context['site_url'] = settings.SITE_URL
+	context = base(context)
 	return render_to_response('browse.html',{},context)
 	
 def curriculum( request, id):
 	context = RequestContext(request)
+	context = base(context)
+	
 	curriculum = Curriculum.objects.get(pk=id)
 	context['titleTag'] = curriculum.titleTag
-	
 	context['curriculum'] = curriculum.title
 	context['grades'] = curriculum.grade_set.all()
-	
-	curricula = []
-	for c in Curriculum.objects.all():
-		attributes = {}
-		attributes['title'] = c.title
-		attributes['id'] = c.id		
-		curricula.append(attributes)
-	context['curricula'] = curricula
-	
-	context['site_url'] = settings.SITE_URL
 	return render_to_response('curriculum.html',{},context)	
 
 	
 def grade( request, id):
 	context = RequestContext(request)
+	context = base(context)
+	
 	grade = Grade.objects.get(pk=id)
 	context['titleTag'] = grade.titleTag
 	
@@ -99,20 +64,12 @@ def grade( request, id):
 	context['curID'] = grade.Curriculum.id
 	context['grade'] = grade.title
 	context['subjects'] = grade.subject_set.all()
-	
-	curricula = []
-	for c in Curriculum.objects.all():
-		attributes = {}
-		attributes['title'] = c.title
-		attributes['id'] = c.id		
-		curricula.append(attributes)
-	context['curricula'] = curricula
-	
-	context['site_url'] = settings.SITE_URL
 	return render_to_response('grade.html',{},context)	
 	
 def subject( request, id):
 	context = RequestContext(request)
+	context = base(context)
+	
 	subject = Subject.objects.get(pk=id)
 	context['titleTag'] = subject.titleTag
 	
@@ -123,19 +80,12 @@ def subject( request, id):
 	context['subject'] = subject.title
 	context['chapters'] = subject.chapter_set.all()
 	
-	curricula = []
-	for c in Curriculum.objects.all():
-		attributes = {}
-		attributes['title'] = c.title
-		attributes['id'] = c.id		
-		curricula.append(attributes)
-	context['curricula'] = curricula
-	
-	context['site_url'] = settings.SITE_URL
 	return render_to_response('subject.html',{},context)
 	
 def chapter( request, id ):
 	context = RequestContext(request)
+	context = base(context)
+	
 	chapter = Chapter.objects.get(pk=id)
 	context['titleTag'] = chapter.titleTag
 	
@@ -147,10 +97,6 @@ def chapter( request, id ):
 	context['subID'] = chapter.subject.id
 	context['chapter'] = chapter.title
 	context['chaID'] = chapter.id
-	
-	#context['activities'] = chapter.activity_set.all() 
-	#context['projects'] = chapter.project_set.all()
-	#context['organizers'] = chapter.organizer_set.all()
 	
 	activities = []
 	for a in chapter.activity_set.all():
@@ -181,30 +127,20 @@ def chapter( request, id ):
 		attributes['votes'] = o.rating.votes
 		organizers.append(attributes)
 	context['organizers'] = organizers
-	
-	curricula = []
-	for c in Curriculum.objects.all():
-		attributes = {}
-		attributes['title'] = c.title
-		attributes['id'] = c.id		
-		curricula.append(attributes)
-	context['curricula'] = curricula
-	
-	context['site_url'] = settings.SITE_URL
 	return render_to_response('chapter.html',{},context)
 	
 def activity( request, id, cid ):
 	context = RequestContext(request)
+	context = base(context)
 	
 	activity = Activity.objects.get(pk=id)
 	context['titleTag'] = activity.titleTag
 	
 	context['starRate'] = activity.rating.get_real_rating()
-	voteValue = activity.rating.get_rating_for_user(None, request.META['REMOTE_ADDR'])  
-	if voteValue == None:				# Checking if new user or if this user has voted already
-		context['VoteExists'] = False
+	if request.user.is_authenticated():
+		context['voteValue'] = activity.rating.get_rating_for_user(request.user, request.META['REMOTE_ADDR'])  
 	else:
-		context['VoteExists'] = True
+		context['voteValue'] = activity.rating.get_rating_for_user(None, request.META['REMOTE_ADDR'])
 		
 	context['files'] = activity.files.all()
 	context['foldables'] = activity.foldables.all()
@@ -230,29 +166,20 @@ def activity( request, id, cid ):
 			attributes['id'] = a.id	
 			activities.append(attributes)
 	context['activities'] = activities
-	
-	curricula = []
-	for c in Curriculum.objects.all():
-		attributes = {}
-		attributes['title'] = c.title
-		attributes['id'] = c.id		
-		curricula.append(attributes)
-	context['curricula'] = curricula
-	
-	context['site_url'] = settings.SITE_URL
 	return render_to_response('activity.html',{'activity':activity},context)
 	
 def project( request, id, cid ):
 	context = RequestContext(request)
+	context = base(context)
+	
 	project = Project.objects.get(pk=id)
 	context['titleTag'] = project.titleTag
 	
 	context['starRate'] = project.rating.get_real_rating()
-	voteValue = project.rating.get_rating_for_user(None, request.META['REMOTE_ADDR'])  
-	if voteValue == None:				# Checking if new user or if this user has voted already
-		context['VoteExists'] = False
+	if request.user.is_authenticated():
+		context['voteValue'] = project.rating.get_rating_for_user(request.user, request.META['REMOTE_ADDR'])  
 	else:
-		context['VoteExists'] = True
+		context['voteValue'] = project.rating.get_rating_for_user(None, request.META['REMOTE_ADDR'])
 	
 	context['files'] = project.files.all()
 	context['foldables'] = project.foldables.all()
@@ -278,36 +205,27 @@ def project( request, id, cid ):
 			attributes['id'] = p.id	
 			projects.append(attributes)
 	context['projects'] = projects
-	
-	curricula = []
-	for c in Curriculum.objects.all():
-		attributes = {}
-		attributes['title'] = c.title
-		attributes['id'] = c.id		
-		curricula.append(attributes)
-	context['curricula'] = curricula
-	
-	context['site_url'] = settings.SITE_URL
+
 	return render_to_response('project.html',{'project':project},context)
 	
 def organizer( request, id, cid ):
 	context = RequestContext(request)
+	context = base(context)
+	
 	organizer = Organizer.objects.get(pk=id)
 	context['titleTag'] = organizer.titleTag
 	
 	context['starRate'] = organizer.rating.get_real_rating()
-	voteValue = organizer.rating.get_rating_for_user(None, request.META['REMOTE_ADDR'])  
-	if voteValue == None:				# Checking if new user or if this user has voted already
-		context['VoteExists'] = False
+	if request.user.is_authenticated():
+		context['voteValue'] = organizer.rating.get_rating_for_user(request.user, request.META['REMOTE_ADDR'])  
 	else:
-		context['VoteExists'] = True
+		context['voteValue'] = organizer.rating.get_rating_for_user(None, request.META['REMOTE_ADDR'])
 	
 	context['files'] = organizer.files.all()
 	context['foldables'] = organizer.foldables.all()
 	context['graphicOrgs'] = organizer.graphicOrgs.all()
 	context['comments'] = organizer.comment_set.all().order_by('timeCreated')
 	context['noOfComments'] = organizer.comment_set.count()
-	#context['comments'] = organizer.comment_set.all()
 	
 	chapter = Chapter.objects.get(pk=cid)							#Details for the breadcrumbs
 	context['curriculum'] = chapter.subject.grade.Curriculum
@@ -327,45 +245,26 @@ def organizer( request, id, cid ):
 			attributes['id'] = o.id	
 			organizers.append(attributes)
 	context['organizers'] = organizers
-	
-	curricula = []
-	for c in Curriculum.objects.all():
-		attributes = {}
-		attributes['title'] = c.title
-		attributes['id'] = c.id		
-		curricula.append(attributes)
-	context['curricula'] = curricula
-	
-	context['site_url'] = settings.SITE_URL
 	return render_to_response('organizer.html',{'organizer':organizer},context)
 
 def foldable( request, id ):
 	context = RequestContext(request)
+	context = base(context)
 	foldable = Foldable.objects.get(pk=id)
 	context['titleTag'] = foldable.titleTag
-	
-	context['site_url'] = settings.SITE_URL
 	return render_to_response('foldable.html', {'foldable':foldable}, context)
 
 
 def graphicOrganizer ( request, id ):
 	context = RequestContext(request)
+	context = base(context)
 	graphOrg = GraphicOrganizer.objects.get(pk=id)
 	context['titleTag'] = graphOrg.titleTag
-	
-	context['site_url'] = settings.SITE_URL
 	return render_to_response('graphicorganizer.html', {'graphOrg':graphOrg}, context)
 
 def submit_resource(request):
 	context = RequestContext(request)
-	curricula = []
-        for c in Curriculum.objects.all():
-                attributes = {}
-                attributes['title'] = c.title
-                attributes['id'] = c.id
-                curricula.append(attributes)
-        context['curricula'] = curricula
-        context['site_url'] = settings.SITE_URL
+	context = base(context)
 
 	if not request.user.is_authenticated(): 
 		return redirect('/')
@@ -375,13 +274,14 @@ def submit_resource(request):
 		return render_to_response('submit_resource.html', {'email_form': form}, context)
 
 	form = EmailForm(request.POST, request.FILES, error_class=DivErrorList)
+	sendMailList = [settings.EMAIL_HOST_USER, 'vidsps@gmail.com']
 	if form.is_valid():
 		messageContent = FormatEmail(form, request)
 		attachments = []
 		if request.FILES:
 			attachments = request.FILES.getlist('attachment')
 		try:
-			mail = EmailMessage("New resource submission", messageContent, settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER])
+			mail = EmailMessage("New resource submission", messageContent, settings.EMAIL_HOST_USER, sendMailList)
 			if attachments:
 				for attach in attachments: 
 					mail.attach(attach.name, attach.read(), attach.content_type)

@@ -37,15 +37,6 @@ class LinkProjectInline(admin.TabularInline):
 	
 class LinkOrganizerInline(admin.TabularInline):
     model = Organizer.links.through
-	
-# class ItemInline(admin.TabularInline): 					# Why are these needed?
-    # model = Item
-
-# class FoldableInline(admin.TabularInline): 
-    # model = Foldable
-
-# class GraphicOrganizerInline(admin.TabularInline):
-    # model = GraphicOrganizer
 
 	
 # Model Admins

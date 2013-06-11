@@ -144,6 +144,15 @@ INSTALLED_APPS = (
 	'south',
 )
 
+TINYMCE_DEFAULT_CONFIG ={
+    'theme' : 'advanced', 
+    'theme_advanced_toolbar_location' : "top",
+    'theme_advanced_buttons1': "bold,italic,underline,separator,bullist,separator,outdent,indent,separator,undo,redo",
+    'theme_advanced_buttons2': "",
+    'theme_advanced_buttons3': "",
+    'theme_advanced_statusbar_location' : 'none'
+}
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.

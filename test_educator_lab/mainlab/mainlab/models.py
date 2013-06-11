@@ -12,17 +12,14 @@ from djangoratings.fields import RatingField
 class MyUserManager(BaseUserManager):
     def create_user(self, email, name, password=None):
         if not email:
-            raise ValueError('Users must have an email address')
- 
+            raise ValueError('Users must have an email address') 
         user = self.model(
             email=MyUserManager.normalize_email(email),
 			name=name,
         )
- 
         user.set_password(password)
         user.save(using=self._db)
         return user
- 
     def create_superuser(self, email, name, password):
         user = self.create_user(email,
             password=password,
@@ -46,29 +43,18 @@ class MyUser(AbstractBaseUser):
 	REQUIRED_FIELDS = ['name']
 	
 	def get_full_name(self):
-        # For this case we return email. Could also be User.first_name User.last_name if you have these fields
 		return self.name
- 
 	def get_short_name(self):
-        # For this case we return email. Could also be User.first_name if you have this field
 		return self.name
-	
 	def __unicode__(self):
 		return self.name
-	
 	def has_perm(self, perm, obj=None):
-        # Handle whether the user has a specific permission?"
 		return True
- 
 	def has_module_perms(self, app_label):
-        # Handle whether the user has permissions to view the app `app_label`?"
 		return True
-	
 	@property
 	def is_staff(self):
-        # Handle whether the user is a member of staff?"
 		return self.is_admin
-		
 	class Meta:
 		app_label = "mainlab"
 
@@ -80,7 +66,6 @@ class Curriculum(models.Model):
 	class Meta:
 		verbose_name_plural = "curricula"	
 	
-
 class Grade(models.Model):
 	Curriculum = models.ForeignKey(Curriculum)
 	title = models.CharField(max_length=200)
@@ -133,11 +118,8 @@ class File(models.Model):
 			return 'doc'
 		return 'other'
 	def delete(self, *args, **kwargs):
-        # You have to prepare what you need before delete the model
 		storage, path = self.doc.storage, self.doc.path
-		# Delete the model before the file
 		super(File, self).delete(*args, **kwargs)
-		# Delete the file after the model
 		storage.delete(path)
         
 		
@@ -207,9 +189,7 @@ class Activity(models.Model):
 	graphicOrgs = models.ManyToManyField(GraphicOrganizer, blank=True)
 	timeCreated = models.DateTimeField(editable=False)
 	timeModified = models.DateTimeField(editable=False)
-	
 	rating = RatingField(range=5, allow_anonymous = True)
-	
 	def __unicode__(self):
 		return self.title
 	def save(self, *args, **kwargs):
@@ -261,9 +241,7 @@ class Organizer(models.Model):
 	instructions = HTMLField()
 	timeCreated = models.DateTimeField(editable=False)
 	timeModified = models.DateTimeField(editable=False)
-	
 	rating = RatingField(range=5, allow_anonymous = True)
-	
 	def __unicode__(self):
 		return self.title
 	def save(self, *args, **kwargs):
@@ -283,7 +261,6 @@ class Comment(models.Model):
 	user = models.ForeignKey(settings.AUTH_USER_MODEL)
 	comment = models.TextField()
 	timeCreated = models.DateTimeField(editable=False)
-
 	def __unicode__(self):
 		return self.comment	
 	def save(self, *args, **kwargs):

@@ -1,16 +1,12 @@
 from django.conf.urls import patterns, include, url
 from dajaxice.core import dajaxice_autodiscover, dajaxice_config
 
-# Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
 
 dajaxice_autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'mainlab.views.home', name='home'),
-    # url(r'^mainlab/', include('mainlab.foo.urls')),
     url(r'^$', 'mainlab.views.index'),
 	url(r'^browse/$', 'mainlab.views.browse'),
 	url(r'^curriculum/i=(?P<id>\d+)/$', 'mainlab.views.curriculum'),
@@ -22,16 +18,26 @@ urlpatterns = patterns('',
 	url(r'^organizer/i=(?P<id>\d+)&c=(?P<cid>\d+)/$', 'mainlab.views.organizer'),
 	url(r'^foldable/i=(?P<id>\d+)/$', 'mainlab.views.foldable'),
 	url(r'^graphicorganizer/i=(?P<id>\d+)/$', 'mainlab.views.graphicOrganizer'),
-	url(r'^about/$', 'mainlab.views.about'), 
-	#url(r'^contrib_form/$', 'mainlab.views.contrib'), 
+	url(r'^about/$', 'mainlab.views.about'),  
   	url(r'^submit_resource/$', 'mainlab.views.submit_resource'),
-  # Uncomment the admin/doc line below to enable admin documentation:
+	# Admin and Grappelli
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 	(r'^grappelli/', include('grappelli.urls')),
 	(r'^tinymce/', include('tinymce.urls')),
-	#dajaxice
+	# Dajaxice
 	url(dajaxice_config.dajaxice_url, include('dajaxice.urls')),
+	#Login Stuff
+	url(r'^account/', include('django.contrib.auth.urls')),
+	url(r'^user/password/reset/$', 
+        'django.contrib.auth.views.password_reset', 
+        {'post_reset_redirect' : '/user/password/reset/done/'},
+        name="password_reset"),
+    (r'^user/password/reset/done/$',
+        'django.contrib.auth.views.password_reset_done'),
+    (r'^user/password/reset/(?P<uidb36>[0-9A-Za-z]+)-(?P<token>.+)/$', 
+        'django.contrib.auth.views.password_reset_confirm', 
+        {'post_reset_redirect' : '/user/password/done/'}),
+    (r'^user/password/done/$', 
+        'django.contrib.auth.views.password_reset_complete'),
 )
