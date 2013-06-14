@@ -7,8 +7,8 @@ from django.shortcuts import redirect
 
 
 from mainlab.models import Curriculum, Grade, Subject, Chapter, Activity, Project, Organizer, File, Link, Foldable, GraphicOrganizer
-from format import FormatEmail
-from forms import EmailForm, DivErrorList
+from format import FormatEmail, FormatSuggest
+from forms import SuggestForm, SubmitResourceForm, DivErrorList
 
 def base(context):								# function to handle code that is common to most views
 	curricula = []
@@ -266,14 +266,14 @@ def submit_resource(request):
 	context = RequestContext(request)
 	context = base(context)
 
-	if not request.user.is_authenticated(): 
-		return redirect('/')
+#	if not request.user.is_authenticated(): 
+#		return redirect('/')
 
 	if request.method != 'POST':
-		form = EmailForm()
-		return render_to_response('submit_resource.html', {'email_form': form}, context)
+		form = SubmitResourceForm()
+		return render_to_response('submit_resource.html', {'submit_resource_form': form}, context)
 
-	form = EmailForm(request.POST, request.FILES, error_class=DivErrorList)
+	form = SubmitResourceForm(request.POST, request.FILES, error_class=DivErrorList)
 	sendMailList = [settings.EMAIL_HOST_USER, 'vidsps@gmail.com']
 	if form.is_valid():
 		messageContent = FormatEmail(form, request)
@@ -282,14 +282,38 @@ def submit_resource(request):
 			attachments = request.FILES.getlist('attachment')
 		try:
 			mail = EmailMessage("New resource submission", messageContent, settings.EMAIL_HOST_USER, sendMailList)
+			mail.content_subtype = "html"
 			if attachments:
 				for attach in attachments: 
 					mail.attach(attach.name, attach.read(), attach.content_type)
 			mail.send()
-			form = EmailForm()
-			return render_to_response('submit_resource.html', {'message': 'Thanks for your submission!', 'email_form':form}, context)
+			form = SubmitResourceForm()
+			return render_to_response('submit_resource.html', {'message': 'Thanks for your submission!', 'submit_resource_form':form}, context)
 		except:
-			form = EmailForm()
-			return render_to_response('submit_resource.html', {'message': 'Failed to send email, attachment might be too large or corrupt', 'email_form':form}, context)
+			form = SubmitResourceForm()
+			return render_to_response('submit_resource.html', {'message': 'Failed to send email, attachment might be too large or corrupt', 'submit_resource_form':form}, context)
 	else :
-		return render_to_response('submit_resource.html', {'email_form' : form}, context)
+		return render_to_response('submit_resource.html', {'submit_resource_form' : form}, context)
+
+
+def suggest(request):
+	context = RequestContext(request)
+	context = base(context)
+
+	if request.method != 'POST':
+                form = SuggestForm()
+                return render_to_response('suggest.html', {'suggest_form': form}, context)
+
+	form = SuggestForm(request.POST, error_class=DivErrorList)
+	if form.is_valid(): 
+		#try: 
+			messageContent = FormatSuggest(form, request)
+			mail = EmailMessage("Suggestion", messageContent, settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER])
+                        mail.content_subtype = "html"
+			mail.send()
+		# except: 
+			# form = SuggestForm()
+			return render_to_response('submit_resource.html', {'message': 'Email was not sent, please try again', 'suggest_form' : form}, context)
+
+	else : 
+		return render_to_response('suggest.html', {'suggest_form' : form}, context)

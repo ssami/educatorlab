@@ -117,11 +117,15 @@
     <a class="brand" href="{{site_url}}">Educator Lab</a>
 	<ul class="nav">
 		<li><a href="#" id="searchButton" onClick="searchToggle();">Search</a></li>
-		<li><a href="{{site_url}}browse/" id="browseButton">Browse</a></li>
+		{% if request.user.is_authenticated %}
+			<li><a href="{{site_url}}submit_resource" id="submitButton" class="submit">Submit</a></li>
+		{% else %}
+			 <li><a href="#" id="submitButton" class="submit" onClick="$('#loginModal').modal('show')">Submit</a></li>
+		{% endif %}
 	</ul>
 	<ul class="nav pull-right">
 	{% if request.user.is_authenticated %}
-		<li><a href="{{site_url}}submit_resource" id="submitButton" class="submit">Submit</a></li>
+		<!-- <li><a href="{{site_url}}submit_resource" id="submitButton" class="submit">Submit</a></li> -->
 		<li><a href="#" id="userButton" onClick="userToggle();">{{request.user.name}}</a></li>
 	{% else %}
 		<li><a href="#" id="loginButton" onClick="$('#loginModal').modal('show')">Log In</a></li>
@@ -267,7 +271,7 @@
 	<div class="footbar-inner">
 		<ul class="foot">
 			<li><a href='{{site_url}}about'>About</a></li>
-			<li><a href='mailto:educatorlab.gmail.com'>Contact</a></li>
+			<li><a href='{{site.url}}/suggest'>Suggest</a></li>
 		</ul>
 	</div>
 </div>

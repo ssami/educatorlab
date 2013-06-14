@@ -20,6 +20,7 @@ urlpatterns = patterns('',
 	url(r'^graphicorganizer/i=(?P<id>\d+)/$', 'mainlab.views.graphicOrganizer'),
 	url(r'^about/$', 'mainlab.views.about'),  
   	url(r'^submit_resource/$', 'mainlab.views.submit_resource'),
+	url(r'^suggest/$', 'mainlab.views.suggest'),
 	# Admin and Grappelli
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),

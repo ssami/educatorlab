@@ -3,7 +3,7 @@
 <head>
 
 {% comment %}
-{{ email_form.media }}
+{{ submit_resource_form.media }}
 {% endcomment %}
 
 {% block script %}
@@ -15,7 +15,12 @@
 {% block content %}
 <div class="formContent">
 	<div style="padding-bottom:10px;"> 
-		Thank you for helping us develop new content at Educator Lab. You can use this form to submit ideas for a new resource. Try to be as detailed as possible, but if not, give us an outline of what you want to accomplish with this resource. Our content and style editors can format and expand on the idea. Please note: we cannot guarantee that your resource will be included in this site.
+	<p style="font-size:16px"><h4>Help build Educator Lab by submitting a resource!</h4></p>
+	<p>		Thank you for helping us develop new content at Educator Lab. It's teachers such as yourselves who are responsible for growing and supporting this site, and we appreciate every contribution you make.  
+	</p>
+	<p>
+You can use this form to submit ideas for a new resource, such as a project or activity. Try to be as detailed as possible, but if you don't have all the details, give us an idea of what you want to accomplish with this resource. Our content and style editors can format and expand on the idea. Please note: we cannot guarantee that your resource will be included in this site.
+	</p>
 	</div>
 
 <ul class="nav nav-list">
@@ -28,82 +33,82 @@
 <span class="label label-error">{{message}}</span>
 {% endif %}
 
-{% if email_form %}
+{% if submit_resource_form %}
 <form method="POST" action ="." enctype="multipart/form-data" style="padding-left:15px">
 {% csrf_token %}  
 
-{{ email_form.non_field_errors }}
+{{ submit_resource_form.non_field_errors }}
 <div style="display:table; margin:0 auto;">
 <div class="formLineElement">
-	<span style="color:red">
-		{{ email_form.curriculum.errors }}
+	<span style="color:#ad1d28">
+		{{ submit_resource_form.curriculum.errors }}
 	</span>
 	<label for="id_curriculum">Curriculum</label> 
-	{{ email_form.curriculum }}
+	{{ submit_resource_form.curriculum }}
 </div>
 
 <div class="formLineElement">
-	<span style="color:red">
-		{{ email_form.subject.errors }}
+	<span style="color:#ad1d28">
+		{{ submit_resource_form.subject.errors }}
 	</span>
 	<label for="id_subject">Subject</label>
-	{{ email_form.subject }}
+	{{ submit_resource_form.subject }}
 </div>
 
 
 <div class="formLineElement">
-	<span style="color:red">	
-		{{ email_form.grade.errors }}
+	<span style="color:#ad1d28">	
+		{{ submit_resource_form.grade.errors }}
 	</span>
 	<label for="id_grade">Grade</label>
-	{{ email_form.grade }}
+	{{ submit_resource_form.grade }}
 </div> 
 
 
 <div class="formLineElement">
-	<span style="color:red">	
-		{{ email_form.chapter.errors }}
+	<span style="color:#ad1d28">	
+		{{ submit_resource_form.chapter.errors }}
 	</span>
 	<label for="id_chapter">Chapter</label>
-	{{ email_form.chapter }}
+	{{ submit_resource_form.chapter }}
 </div>
 </div>
 
 <div style="display:table; margin:0 auto;"> 
 <div class="formLineElement"> 
-	{{ email_form.activityGoals.errors }}
-	<label for="id_goals">Activity Goals</label>
-	{{ email_form.activityGoals }}
+	{{ submit_resource_form.activityGoals.errors }}
+	<label for="id_goals">Activity/Project Goals</label>
+	{{ submit_resource_form.activityGoals }}
 </div>
 </div>
 
 <div style="display:table; margin:0 auto;">
 <div class="formLineElement">
-	<span style="color:red">
-		{{ email_form.resourceDetails.errors }}
+	<span style="color:#ad1d28">
+		{{ submit_resource_form.resourceDetails.errors }}
 	</span>
-	<label for="id_resource">Resource Details</label>
-	{{ email_form.resourceDetails }}
+	<label for="id_resource">Activity/Project Details</label>
+	{{ submit_resource_form.resourceDetails }}
 </div>
 </div>
 
 <div style="display:table; margin:0 auto; width:100%; position:relative;">
 <div style="position:absolute;top:10px;left:100px;">
 <div class="formLineElement" style="float:left;">
-        <span style="color:red">
-		{{ email_form.attachment.errors }}
+        <span style="color:#ad1d28">
+		{{ submit_resource_form.attachment.errors }}
         </span>
-	<label for="id_attachment1">Attachment 1</label>{{ email_form.attachment }}
+	<label for="id_attachment1">Attachment 1</label>{{ submit_resource_form.attachment }}
 </div>
 <div class="formLineElement" style="float:left">
-        <span style="color:red">
-		{{ email_form.attachment.errors }}
+        <span style="color:#ad1d28">
+		{{ submit_resource_form.attachment.errors }}
         </span>
-	<label for="id_attachment2">Attachment 2</label> {{ email_form.attachment }}
+	<label for="id_attachment2">Attachment 2</label> {{ submit_resource_form.attachment }}
 </div>
 </div>
 <div class="formLineElement" style="position:absolute;top:30px;right:100px;">
-	<button type="submit" class="btn btn-danger" name="submit"> Submit </button>
+	<button type="submit" class="btn btn-danger" name="submit"> Submit Resource</button>
 </div>
 </div>
 <br><br><br><br>
