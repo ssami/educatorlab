@@ -27,14 +27,6 @@
 
 
 {% block content %}
-
-<!-- <div id="breadCrumbs">
-	<a href="{{site_url}}curriculum/i={{curID}}/" class="crumbLink">{{curriculum}}</a> >> 
-	<a href="{{site_url}}grade/i={{graID}}/" class="crumbLink">Grade {{grade}}</a> >> 
-	<a href="{{site_url}}subject/i={{subID}}/" class="crumbLink">{{subject}}</a> >>
-	<span class="crumbCurrent">{{chapter}}</span>
-</div> -->
-
 <ul class="breadcrumb">
   <li><a href="{{site_url}}curriculum/i={{curID}}/">{{curriculum}}</a> <span class="divider">/</span></li>
   <li><a href="{{site_url}}grade/i={{graID}}/">Grade {{grade}}</a> <span class="divider">/</span></li>
@@ -74,24 +66,6 @@
 				<span class="resourceTitle">{{p.title|safe}}</span>
 				<span class="rating"><span class="star" data-score="{{p.starRate}}"></span><span class="voteNum">({{p.votes}})</span></span>
 			</div></a> <br>		
-		{% endfor %}
-      </div>
-    </div>
-  </div>
-  
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-        Organizers
-      </a>
-    </div>
-    <div id="collapseThree" class="accordion-body collapse" style="line-height:0px;">
-      <div class="accordion-inner">
-        {% for o in organizers %}
-			<a href="{{site_url}}organizer/i={{o.id}}&c={{chaID}}/"><div class="resourceLink">
-				<span class="resourceTitle">{{o.title|safe}}</span>
-				<span class="rating"><span class="star" data-score="{{o.starRate}}"></span><span class="voteNum">({{o.votes}})</span></span>
-			</div></a> <br>	
 		{% endfor %}
       </div>
     </div>

@@ -23,12 +23,17 @@
   <li class="active">{{subject}}</li>
 </ul>
 
-<div class="text-center"><div id="mainList">
-<div style="color:#ad1d28;font-size:large">Select Chapter</div><br>
+<div class="mainList">
+<div class="mainListHead">Select Chapter in {{subject}}</div>
+<hr>
+<div style="padding:0px 50px;"><table class="table">
 {% for c in chapters %}
-	<a href="{{site_url}}chapter/i={{c.id}}/" class="mainLink"> {{c.title}} </a> <br><br>
+	<tr>
+		<td style="font-size: large;border:none;">{{c.number}}.</td>
+		<td style="border:none;"><a href="{{site_url}}chapter/i={{c.id}}/" class="mainLink">{{c.title}} </a></td>
+	</tr>
 {% endfor %}
-</div></div>
+</table></div>
 
 {% endblock content %}
 

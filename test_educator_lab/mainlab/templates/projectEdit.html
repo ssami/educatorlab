@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block script %}
+	<script type="text/javascript" src="/static/tiny_mce/tiny_mce.js"></script>
+	<script type="text/javascript">
+	$( document ).ready(function() {
+		tinyMCE.init({
+			mode: "textareas",
+			theme: "simple"
+		});
+	});
+	</script>
+	<script type="text/javascript">
+		function addUpload(){
+			$('#uploadBox').append('<input type="file" name="attachment" />');
+		}
+		
+		function removeAtt(idNum,fid){
+			var r=confirm("Confirm remove file?");
+			if(r == true){
+				Dajaxice.mainlab.removeAtt(Dajax.process,{'type':'p', 'rid':'{{project.id}}', 'fid':fid});
+				$('#attachment' + idNum).hide();
+			}
+		}
+	</script>
+{% endblock script %}
+
+{% block content %}
+
+	<ul class="breadcrumb">
+		<li><a href="{{site_url}}manager/">Content Manager</a> <span class="divider">/</span></li>
+		<li class="active">{{project.title}}</li>
+	</ul>
+
+	<form method="post" action="/saveProject/" enctype="multipart/form-data">>{% csrf_token %}
+	<div class="resourceContent">
+		<h4>{{project.title|safe}}</h4>
+
+			<input type="hidden" name="id" value="{{project.id}}">
+		
+			<h5>Goals:</h5>
+			<textarea name="goals" style="width:100%;">{{project.goals}}</textarea> <br>
+		
+			<h5>Materials Required:</h5>
+			<textarea name="materials" style="width:100%">{{project.materials}}</textarea> <br>
+		
+			<h5>Instructions:</h5>
+			<textarea name="instructions" style="width:100%">{{project.instructions}}</textarea> <br>
+			
+			<div class="text-right">
+				{% if project.publish == False %}
+				<input type="submit" class="btn btn-danger" style="margin-right:10px;" name="publish" value="Publish" />
+				{% else %}
+				<input type="submit" class="btn btn-danger" style="margin-right:10px;" name="unpublish" value="Unpublish" />
+				{% endif %}
+				<input type="submit" class="btn" name="save" value="Save" />
+			</div>
+		
+		
+	<br><br><br></div>
+
+	<div class="sideBox">
+		<b>Contributed by:</b> {{project.author.name}}<br>
+		<b>Time submitted:</b> {{project.timeCreated}}<br>
+		<b>Last modified by:</b> {{project.userModified}} <br>
+		<b>Time modified:</b> {{project.timeModified}}<br><br>
+		
+		<b>Curriculum:</b> {{curricula}}<br>
+		<b>Grade:</b> {{grades}}<br>
+		<b>Subject:</b> {{subjects}}<br>
+		<b>Chapter:</b> {{chapters}}
+	</div>
+	
+	{% if files %}	
+		<div class="sideBox">
+			<h5>Student Handouts</h5>
+			{% for f in files %}
+				<div class="attachment" id="attachment{{forloop.counter}}" style="position:relative;">
+					<a target='_blank' href='{{f.doc.url}}'>
+						<img class='attImageTall' src='/media/images/handout.png'>
+						<div class='attText'>{{f.title}}</div>
+					</a>
+					<button type="button" class="close" onClick="removeAtt({{forloop.counter}},{{f.id}});" style="position:absolute;top:0px;right:20px;">×</button>
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+	
+	<div class="sideBox">
+		<h5>Upload Files</h5>
+		<div id="uploadBox">
+			<input type="file" name="attachment" />
+		</div>
+		<a style="cursor:pointer;" onClick="addUpload();">Add another file</a>
+	</div>
+	
+	</form>
+	
+	<form method="post" action="/deleteProject/" style="position:absolute;top:730px;left:50px;">{% csrf_token %}
+		<input type="hidden" name="id" value="{{project.id}}">
+		<input type="submit" class="btn" name="delete" value="Reject" onClick="return confirm('Confirm delete?');"/>
+	</form>
+{% endblock content %}

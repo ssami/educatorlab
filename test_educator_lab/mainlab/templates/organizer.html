@@ -95,6 +95,7 @@
 	<div class="resourceContent">
 		<h4>{{organizer.title|safe}}</h4> <br>
 		<span id="starRead" data-score="{{starRate}}"></span><span id="numVotes" style="padding-left:7px;padding-top:6px;font-size:16px;">({{organizer.rating.votes}})</span><br><br> 
+		<h5>Instructions:</h5>
 		{{organizer.instructions|safe}} <br>
 		
 		<div class="authorDet">{% if organizer.author != None %}Resource contributed by {{organizer.author.name}}{% endif %}</div>

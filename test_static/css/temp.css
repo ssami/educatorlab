@@ -9,6 +9,15 @@ body{
 	height:100%;
 }
 
+hr {
+	display: block; 
+	height: 1px;
+    border: 0; 
+	border-top: 1px solid #ccc;
+    margin: 1em 0; 
+	padding: 0;
+}
+
 #wrapper {
     margin-left:auto;
     margin-right:auto;
@@ -21,13 +30,19 @@ i , em{
 
 }
 
-#mainList{
-	width:100% 
+.mainList{
+	padding:0px 40px 0px 40px;
+	width:740px;
+}
+
+.mainListHead{
+	font-size:large;
+	padding:20px 0px 5px 0px;
+	color:#ad1d28;
 }
 
 .mainLink{
 	cursor: pointer;
-	padding: 20px 20px 20px 20px;
 	color: #242a32;
 	font-size: large;
 	text-decoration: none;
@@ -67,10 +82,10 @@ i , em{
 }
 
 .resourceContent{
-	padding: 5px 50px 40px 50px;
+	padding: 20px 50px 40px 50px;
 	width: 700px;
 	float:left;
-	height: 100%;
+	position:relative;
 }
 
 .authorDet{
@@ -180,7 +195,7 @@ i , em{
 .searchPop{
   position: absolute;
   top: 59px;
-  left: 170px;
+  left: 160px;
   z-index: 1010;
   display: none;
   padding: 20px;
@@ -214,7 +229,7 @@ i , em{
 .searchPop .arrow {
   border-width: 11px;
   top: -11px;
-  left: 10px;
+  left: 20px;
   margin-left: -11px;
   border-bottom-color: #999;
   border-bottom-color: rgba(0, 0, 0, 0.25);
@@ -320,9 +335,12 @@ i , em{
 
 
 .formContent{
-        padding: 30px 50px 40px 50px;
-        float: left:
-        height: 100%;
+	/* background-color: #eceff1; */
+	padding: 25px 20px 20px 10px;
+	margin:20px 10px 20px 40px;
+	width: 740px;
+	float:left;
+	position:relative;
 }
 
 

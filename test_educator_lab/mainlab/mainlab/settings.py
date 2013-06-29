@@ -1,7 +1,23 @@
 # Django settings for mainlab project.
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+import os 
+
+#DEV = False # default is production where nothing is broken
+#if (os.path.isfile("../.env-prod")) :
+#	DEV = False
+
+#if DEV:
+#	DEBUG = TEMPLATE_DEBUG = True
+	
+#else: 
+#	DEBUG = TEMPLATE_DEBUG = False
+
+DEV = True
+if DEV:
+	DEBUG = TEMPLATE_DEBUG = True
+
+else : 
+	DEBUG = TEMPLATE_DEBUG = False
 
 ADMINS = (
 	('Arvind Chandrababu', 'arvind.chandrababu@gmail.com'),
@@ -10,10 +26,15 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+if DEV : 
+	DBNAME = "testeducatorlab"
+else : 
+	DBNAME = "educatorlab"
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'testeducatorlab',                      # Or path to database file if using sqlite3.
+        'NAME': DBNAME,                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'educatorlab',
         'PASSWORD': 'tagoreinitiative',
@@ -24,7 +45,7 @@ DATABASES = {
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["http://www.educatorlab.com"]
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -51,22 +72,35 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = '/home/sumitasami/webapps/test_media/'
+if DEV:
+	MEDIA_ROOT = '/home/sumitasami/webapps/test_media/'
+else : 
+	MEDIA_ROOT = '/home/sumitasami/webapps/media/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = 'http://tagoreinitiative.com/media/'
+if DEV:
+	MEDIA_URL = 'http://tagoreinitiative.com/media/'
+else:
+	MEDIA_URL = 'http://educatorlab.com/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
-# Example: "/var/www/example.com/static/"
-STATIC_ROOT = '/home/sumitasami/webapps/test_static/'
+# Example: "/var/www/example.com/static/"i
+if DEV:
+	STATIC_ROOT = '/home/sumitasami/webapps/test_static/'
+else:
+	STATIC_ROOT = '/home/sumitasami/webapps/static/'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = 'http://tagoreinitiative.com/static/'
+
+if DEV:
+	STATIC_URL = 'http://tagoreinitiative.com/static/'
+else:
+	STATIC_URL = 'http://educatorlab.com/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -110,12 +144,17 @@ ROOT_URLCONF = 'mainlab.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'mainlab.wsgi.application'
 
+if DEV : 
+	TEMPLATE = "/home/sumitasami/webapps/test_educator_lab/mainlab/templates"
+else :
+	TEMPLATE = "/home/sumitasami/webapps/educator_lab/mainlab/templates"	
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 	
-	"/home/sumitasami/webapps/test_educator_lab/mainlab/templates",
+	TEMPLATE,
 )
 
 INSTALLED_APPS = (
@@ -171,6 +210,10 @@ LOGGING = {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler'
+        },
+	'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler'
         }
     },
     'loggers': {
@@ -179,7 +222,12 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': True,
         },
-    }
+	'dajaxice' : {
+            'handlers' : ['console'],
+            'level' : 'WARNING',
+            'propagate' : True,
+    	},
+    },
 }
 
 
@@ -195,23 +243,27 @@ SERVER_EMAIL = 'educatorlab@gmail.com'
 
 # Context Processors for the Grappelli Custom Dashboard 
 # See http://django-grappelli.readthedocs.org/en/latest/dashboard_setup.html for more details
+
 TEMPLATE_CONTEXT_PROCESSORS = (
     # "django.contrib.auth.context_processors.auth",
     # "django.core.context_processors.request",
     # "django.core.context_processors.i18n",
     # 'django.contrib.messages.context_processors.messages',
-	'django.contrib.auth.context_processors.auth',
-	'django.core.context_processors.debug',
-	'django.core.context_processors.i18n',
-	'django.core.context_processors.media',
-	'django.core.context_processors.static',
-	'django.core.context_processors.request',
-	'django.contrib.messages.context_processors.messages'
+        'django.contrib.auth.context_processors.auth',
+        'django.core.context_processors.debug',
+        'django.core.context_processors.i18n',
+        'django.core.context_processors.media',
+        'django.core.context_processors.static',
+        'django.core.context_processors.request',
+        'django.contrib.messages.context_processors.messages'
 )
+
 
 AUTH_USER_MODEL = 'mainlab.MyUser'
 
 GRAPPELLI_INDEX_DASHBOARD = 'dashboard.CustomIndexDashboard'
 
-
-SITE_URL = "http://tagoreinitiative.com/"
+if DEV:
+	SITE_URL = "http://tagoreinitiative.com/"
+else: 
+	SITE_URL = "http://educatorlab.com/"

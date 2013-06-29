@@ -9,9 +9,8 @@ from django.views.decorators.csrf import csrf_exempt
 
 from mainlab.models import MyUser, Curriculum, Grade, Subject, Chapter, Activity, Project, Organizer, File, Link, Foldable, GraphicOrganizer
 from format import FormatEmail, FormatSuggest
-from forms import SuggestForm, SubmitResourceForm,  DivErrorList
+from forms import SuggestForm, SubmitResourceForm, DivErrorList
 #UploadFileForm
-
 
 def base(context):								# function to handle code that is common to most views
 	curricula = []
@@ -81,7 +80,7 @@ def subject( request, id):
 	context['grade'] = subject.grade
 	context['graID'] = subject.grade.id
 	context['subject'] = subject.title
-	context['chapters'] = subject.chapter_set.filter(hasResource=True).order_by('number')
+	context['chapters'] = subject.chapter_set.filter(hasResource=True)
 	
 	return render_to_response('subject.html',{},context)
 	
@@ -220,61 +219,40 @@ def submit_resource(request):
                 return render_to_response('login.html', {}, context)
         
         if request.method == 'POST': 
-            form = SubmitResourceForm(request.POST, error_class=DivErrorList)
+            form = SubmitResourceForm(request.POST)
             if form.is_valid():
-        	try:
-                    resourceType = form.cleaned_data['resourceType']
-                    if resourceType =="Activity":
-                        activity = Activity()
-                        activity.title = form.cleaned_data['title']
-                        activity.lesson = form.cleaned_data['lesson']
-                        activity.goals = form.cleaned_data['goals']
-                        activity.materials = form.cleaned_data['materials']
-                        activity.author = request.user
-                        activity.save()
-                        activity.chapters.add(form.cleaned_data['chapter'])
-                        if request.FILES:
-                            attachments = request.FILES.getlist('attachment')
-                        try:
-                            if attachments:
-                                for attach in attachments:
-                                    file = File.objects.create(title=attach.name, doc=attach)
-                                    activity.files.add(file)
-                                    activity.save()
-                        except:
-                            activity.save()
-                    
-                    else:
-                        project = Project()
-                        project.title = form.cleaned_data['title']
-                        project.instructions = form.cleaned_data['lesson']
-                        project.goals = form.cleaned_data['goals']
-                        project.materials = form.cleaned_data['materials']
-                        project.author = request.user
-                        project.save()
-                        project.chapters.add(form.cleaned_data['chapter'])
-                        if request.FILES:
-                            attachments = request.FILES.getlist('attachment')
-                        try:
-                            if attachments:
-                                for attach in attachments:
-                                    file = File.objects.create(title=attach.name, doc=attach)
-                                    project.files.add(file)
-                                    project.save()
-                        except:
-                            project.save()
+                try:
+		 
+                    activity = Activity()
+		    activity.title = form.cleaned_data['title']
+                    activity.lesson = form.cleaned_data['lesson']
+		    activity.goals = form.cleaned_data['goals']
+		    activity.materials = form.cleaned_data['materials']
+		    activity.author = request.user
+		    activity.save()
+                    activity.chapters.add(form.cleaned_data['chapter'])
+		    if request.FILES:
+ 	               attachments = request.FILES.getlist('attachment')
+                    try:
+                        if attachments:
+                            for attach in attachments:
+                            	file = File.objects.create(title=attach.name, doc=attach)
+                                activity.files.add(file)
+                                activity.save()
+                    except:
+			activity.save()
 
-		    form = SubmitResourceForm(error_class=DivErrorList)
+                    form = SubmitResourceForm()
                     return render_to_response('submit_resource.html', {'message' : 'Thank you for your submission!', 'submit_resource_form': form}, context)
                 except Exception as exp: 
-                    form = SubmitResourceForm(request.POST, error_class=DivErrorList)
+                    form = SubmitResourceForm(request.POST)
                     return render_to_response('submit_resource.html', {'message': exp, 'submit_resource_form':form}, context)
             else:
-		form = SubmitResourceForm(request.POST, error_class=DivErrorList)
+		form = SubmitResourceForm(request.POST)
                 return render_to_response('submit_resource.html', {'message' : 'Form data is invalid! Please try again', 'submit_resource_form' : form}, context)
             
         else: 
-            form = SubmitResourceForm(error_class=DivErrorList)
+            form = SubmitResourceForm()
             return render_to_response('submit_resource.html', {'submit_resource_form': form}, context)
                    
 	
@@ -516,6 +494,7 @@ def saveActivity(request):
 	activity = Activity.objects.get(pk=request.POST['id'])
 	
 	activity.goals = request.POST['goals']
+	activity.time = request.POST['time']
 	activity.materials = request.POST['materials']
 	activity.lesson = request.POST['lesson']
 	activity.userModified = request.user
@@ -544,12 +523,12 @@ def saveActivity(request):
 			c.subject.grade.save()
 			c.subject.grade.Curriculum.hasResource = True
 			c.subject.grade.Curriculum.save()
-		if activity.author:	
-			context['email'] = activity.author.email
-			context['personName'] = activity.author.name
-			context['subject'] = "Published!"
-			context['message'] = "Your activity has been published!"
-			return render_to_response('emailTemplate.html',{},context)
+			
+		context['email'] = activity.author.email
+		context['personName'] = activity.author.name
+		context['subject'] = "Published!"
+		context['message'] = "Your activity has been published!"
+		return render_to_response('emailTemplate.html',{},context)
 		
 	if 'unpublish' in request.POST:
 		activity.publish = False
@@ -565,8 +544,10 @@ def saveProject(request):
 	project = Project.objects.get(pk=request.POST['id'])
 	
 	project.goals = request.POST['goals']
+	project.time = request.POST['time']
 	project.materials = request.POST['materials']
 	project.instructions = request.POST['instructions']
+	project.rubric = request.POST['rubric']
 	project.userModified = request.user
 	project.save()
 	
@@ -593,12 +574,12 @@ def saveProject(request):
 			c.subject.grade.save()
 			c.subject.grade.Curriculum.hasResource = True
 			c.subject.grade.Curriculum.save()
-		if project.author:	
-			context['email'] = project.author.email
-			context['personName'] = project.author.name
-			context['subject'] = "Published!"
-			context['message'] = "Your project has been published!"
-			return render_to_response('emailTemplate.html',{},context)
+			
+		context['email'] = project.author.email
+		context['personName'] = project.author.name
+		context['subject'] = "Published!"
+		context['message'] = "Your project has been published!"
+		return render_to_response('emailTemplate.html',{},context)
 	
 	if 'unpublish' in request.POST:
 		project.publish = False

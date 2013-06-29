@@ -9,6 +9,10 @@ var Dajaxice = {
     
     mainlab: {
     
+    removeAtt: function(callback_function, argv, custom_settings){
+        return Dajaxice.call('mainlab.removeAtt', 'POST', callback_function, argv, custom_settings);
+    },
+
     curFind: function(callback_function, argv, custom_settings){
         return Dajaxice.call('mainlab.curFind', 'POST', callback_function, argv, custom_settings);
     },
@@ -17,20 +21,28 @@ var Dajaxice = {
         return Dajaxice.call('mainlab.siteLogin', 'POST', callback_function, argv, custom_settings);
     },
 
+    assignProManager: function(callback_function, argv, custom_settings){
+        return Dajaxice.call('mainlab.assignProManager', 'POST', callback_function, argv, custom_settings);
+    },
+
     register: function(callback_function, argv, custom_settings){
         return Dajaxice.call('mainlab.register', 'POST', callback_function, argv, custom_settings);
     },
 
-    rateResource: function(callback_function, argv, custom_settings){
-        return Dajaxice.call('mainlab.rateResource', 'POST', callback_function, argv, custom_settings);
+    graFind: function(callback_function, argv, custom_settings){
+        return Dajaxice.call('mainlab.graFind', 'POST', callback_function, argv, custom_settings);
     },
 
     subFind: function(callback_function, argv, custom_settings){
         return Dajaxice.call('mainlab.subFind', 'POST', callback_function, argv, custom_settings);
     },
 
-    graFind: function(callback_function, argv, custom_settings){
-        return Dajaxice.call('mainlab.graFind', 'POST', callback_function, argv, custom_settings);
+    subjectFind: function(callback_function, argv, custom_settings){
+        return Dajaxice.call('mainlab.subjectFind', 'POST', callback_function, argv, custom_settings);
+    },
+
+    rateResource: function(callback_function, argv, custom_settings){
+        return Dajaxice.call('mainlab.rateResource', 'POST', callback_function, argv, custom_settings);
     },
 
     siteLogout: function(callback_function, argv, custom_settings){
@@ -39,6 +51,18 @@ var Dajaxice = {
 
     addComment: function(callback_function, argv, custom_settings){
         return Dajaxice.call('mainlab.addComment', 'POST', callback_function, argv, custom_settings);
+    },
+
+    assignActManager: function(callback_function, argv, custom_settings){
+        return Dajaxice.call('mainlab.assignActManager', 'POST', callback_function, argv, custom_settings);
+    },
+
+    curricFind: function(callback_function, argv, custom_settings){
+        return Dajaxice.call('mainlab.curricFind', 'POST', callback_function, argv, custom_settings);
+    },
+
+    gradeFind: function(callback_function, argv, custom_settings){
+        return Dajaxice.call('mainlab.gradeFind', 'POST', callback_function, argv, custom_settings);
     }
 
 

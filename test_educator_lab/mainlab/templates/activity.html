@@ -97,10 +97,9 @@
 		<span id="starRead" data-score="{{starRate}}"></span><span id="numVotes" style="padding-left:7px;padding-top:6px;font-size:16px;">({{activity.rating.votes}})</span><br><br>
 		<h5>Goals:</h5>
 		{{activity.goals|safe}} <br>
-		<h5>Time Required:</h5>
-		{{activity.time|safe}} <br>
 		<h5>Materials Required:</h5>
 		{{activity.materials|safe}} <br>
+		<h5>Lesson:</h5>
 		{{activity.lesson|safe}} <br>
 	
 		<div class="authorDet">{% if activity.author != None %}Resource contributed by {{activity.author.name}}{% endif %}</div>
@@ -160,30 +159,6 @@
 			<a class='attachment' target='_blank' href='{{f.doc.url}}'>
 				<img class='attImageTall' src='/media/images/handout.png'>
 				<div class='attText'>{{f.title}}</div>
-			</a>
-		{% endfor %}
-	</div>
-	{% endif %}
-	
-	{% if foldables %}
-	<div class="sideBox"> 
-		<h5>Foldables</h5>
-		{% for fd in foldables %}
-			<a class='attachment' target='_blank' href='{{fd.image.url}}'>
-				<img class='attImageTall' src='/media/images/foldable.png'>
-				<div class='attText'>{{fd.title}}</div>
-			</a>
-		{% endfor %}
-	</div>
-	{% endif %}
-
-	{% if graphicOrgs %}
-	<div class="sideBox">
-		<h5>Graphic Organizers</h5>
-		{% for g in graphicOrgs %}
-           `<a class='attachment' target='_blank' href='{{g.file.url}}'>
-               `<img class='attImageTall' src='/media/images/graphic_org.png'>
-              `	<div class='attText'>{{g.title}}</div>
 			</a>
 		{% endfor %}
 	</div>

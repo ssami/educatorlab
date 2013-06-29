@@ -37,6 +37,8 @@ class MyUser(AbstractBaseUser):
 	is_active = models.BooleanField(default=True)
 	is_admin = models.BooleanField(default=False)
  
+	is_manager = models.BooleanField(default=False)
+ 
 	objects = MyUserManager()
  
 	USERNAME_FIELD = 'email'
@@ -61,6 +63,7 @@ class MyUser(AbstractBaseUser):
 class Curriculum(models.Model):
 	title = models.CharField(max_length=200)
 	titleTag = models.CharField(max_length=70, blank=True)
+	hasResource = models.BooleanField(default=False)
 	def __unicode__(self):
 		return self.title
 	class Meta:
@@ -71,6 +74,7 @@ class Grade(models.Model):
 	title = models.CharField(max_length=200)
 	titleTag = models.CharField(max_length=70, blank=True)
 	number = models.IntegerField()
+	hasResource = models.BooleanField(default=False)
 	def __unicode__(self):
 		return self.title
 	def related_label(self):
@@ -80,6 +84,7 @@ class Subject(models.Model):
 	grade = models.ForeignKey(Grade)
 	title = models.CharField(max_length=200)
 	titleTag = models.CharField(max_length=70, blank=True)
+	hasResource = models.BooleanField(default=False)
 	def __unicode__(self):
 		return self.title
 	def curriculum_name(self):
@@ -93,6 +98,7 @@ class Chapter(models.Model):
 	title = models.CharField(max_length=200)
 	titleTag = models.CharField(max_length=70, blank=True)
 	number = models.IntegerField()
+	hasResource = models.BooleanField(default=False)
 	def __unicode__(self):
 		return self.title
 	def grade_name(self):
@@ -175,21 +181,31 @@ class GraphicOrganizer(models.Model):
 
 class Activity(models.Model):
 	author = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True)
+	manager = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, related_name='+')
+	# contrib
 	title = models.CharField(max_length=200)
 	titleTag = models.CharField(max_length=70, blank=True)
 	chapters = models.ManyToManyField(Chapter)
+	# contrib
 	goals = HTMLField()
 	time = HTMLField()
+	# contrib
 	materials = HTMLField()
+	# contrib
 	lesson = HTMLField()
 	links = models.ManyToManyField(Link, blank=True)
+	# attachments: contrib
 	files = models.ManyToManyField(File, blank=True)
 	items = models.ManyToManyField(Item, blank=True)
 	foldables = models.ManyToManyField(Foldable, blank=True)
 	graphicOrgs = models.ManyToManyField(GraphicOrganizer, blank=True)
 	timeCreated = models.DateTimeField(editable=False)
 	timeModified = models.DateTimeField(editable=False)
+	userModified = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, related_name='+')
 	rating = RatingField(range=5, allow_anonymous = True)
+	
+	publish = models.BooleanField(default=False)
+	
 	def __unicode__(self):
 		return self.title
 	def save(self, *args, **kwargs):
@@ -203,22 +219,31 @@ class Activity(models.Model):
 		
 class Project(models.Model):
 	author = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True)
+	manager = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, related_name='+')
+	# contrib
 	title = models.CharField(max_length=200)
 	titleTag = models.CharField(max_length=70, blank=True)
 	chapters = models.ManyToManyField(Chapter)
+	# contrib
 	goals = HTMLField()
 	time = HTMLField()
+	# contrib
 	materials = HTMLField()
+	# contrib
 	instructions = HTMLField()
 	rubric = HTMLField()
+	# attachments: contrib
 	links = models.ManyToManyField(Link, blank=True)
 	files = models.ManyToManyField(File, blank=True)
 	foldables = models.ManyToManyField(Foldable, blank=True)
 	graphicOrgs = models.ManyToManyField(GraphicOrganizer, blank=True)
 	timeCreated = models.DateTimeField(editable=False)
 	timeModified = models.DateTimeField(editable=False)
+	userModified = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, related_name='+')
 	
 	rating = RatingField(range=5, allow_anonymous = True)
+	
+	publish = models.BooleanField(default=False)
 	
 	def __unicode__(self):
 		return self.title
@@ -241,7 +266,11 @@ class Organizer(models.Model):
 	instructions = HTMLField()
 	timeCreated = models.DateTimeField(editable=False)
 	timeModified = models.DateTimeField(editable=False)
+	userModified = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, related_name='+')
 	rating = RatingField(range=5, allow_anonymous = True)
+	
+	publish = models.BooleanField(default=False)
+	
 	def __unicode__(self):
 		return self.title
 	def save(self, *args, **kwargs):

@@ -117,14 +117,16 @@
     <a class="brand" href="{{site_url}}">Educator Lab</a>
 	<ul class="nav">
 		<li><a href="#" id="searchButton" onClick="searchToggle();">Search</a></li>
-		{% if request.user.is_authenticated %}
-			<li><a href="{{site_url}}submit_resource" id="submitButton" class="submit">Submit</a></li>
-		{% else %}
-			 <li><a href="#" id="submitButton" class="submit" onClick="$('#loginModal').modal('show')">Submit</a></li>
-		{% endif %}
+		<li><a href="{{site_url}}submit_resource" id="submitButton" >Submit Content</a></li>
 	</ul>
 	<ul class="nav pull-right">
 	{% if request.user.is_authenticated %}
+		{% if request.user.is_admin %}
+		<li><a href="{{site_url}}managerAdmin/" id="managerButton">Admin</a></li>
+		{% endif %}
+		{% if request.user.is_manager %}
+		<li><a href="{{site_url}}manager/" id="managerButton">Manager</a></li>
+		{% endif %}
 		<!-- <li><a href="{{site_url}}submit_resource" id="submitButton" class="submit">Submit</a></li> -->
 		<li><a href="#" id="userButton" onClick="userToggle();">{{request.user.name}}</a></li>
 	{% else %}
@@ -164,8 +166,8 @@
 		</div>
 	</form>
 	<div class="text-center">
-		<a href="#" onClick="$('#loginModal').modal('hide');$('#forgotModal').modal('show');">Forgot your password?</a>
-	</div>
+		<a href="#" onClick="$('#loginModal').modal('hide');$('#forgotModal').modal('show');">Forgot password?</a>&nbsp;|&nbsp; 
+		<a href="#" onClick="$('#loginModal').modal('hide');$('#registerModal').modal('show');">Sign up for free </a>	</div>
   </div>
   <div class="modal-footer">
     <button class="btn btn-danger" onClick="siteLogin()">Log In</button>
@@ -265,7 +267,8 @@
 {% block content %}
 
 {% endblock content %}
-
+<div style="width:100%;height:70px;float:left;"></div>
+</div>
 
 <div class="footbar">
 	<div class="footbar-inner">
@@ -276,7 +279,7 @@
 	</div>
 </div>
 
-</div></body>
+</body>
 
 <script type="text/javascript">
 	function userToggle(){
