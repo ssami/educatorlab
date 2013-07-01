@@ -6,11 +6,6 @@ import os
 #if (os.path.isfile("../.env-prod")) :
 #	DEV = False
 
-#if DEV:
-#	DEBUG = TEMPLATE_DEBUG = True
-	
-#else: 
-#	DEBUG = TEMPLATE_DEBUG = False
 
 DEV = True
 if DEV:
