@@ -33,6 +33,10 @@ var Dajaxice = {
         return Dajaxice.call('mainlab.graFind', 'POST', callback_function, argv, custom_settings);
     },
 
+    autoSave: function(callback_function, argv, custom_settings){
+        return Dajaxice.call('mainlab.autoSave', 'POST', callback_function, argv, custom_settings);
+    },
+
     subFind: function(callback_function, argv, custom_settings){
         return Dajaxice.call('mainlab.subFind', 'POST', callback_function, argv, custom_settings);
     },

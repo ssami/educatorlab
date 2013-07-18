@@ -130,7 +130,7 @@
 	</tr>
 	{% for p in publishedProjects %}
 	<tr>
-		<td><a target="_blank" href="{{site_url}}activityEdit/i={{p.id}}/">{{p.title|truncatewords:6}}</a></td>
+		<td><a target="_blank" href="{{site_url}}projectEdit/i={{p.id}}/">{{p.title|truncatewords:6}}</a></td>
 		<td>{{p.curricula}}, {{p.grades}}, {{p.subjects}}</td>
 		<td>{{p.timeCreated}}</td>
 		<td>{{p.author.name}}</td>

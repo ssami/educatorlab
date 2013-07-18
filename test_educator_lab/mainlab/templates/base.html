@@ -54,9 +54,8 @@
 		email = $('#emailReg').val();
 		remail = $('#remailReg').val();
 		pass = $('#passReg').val();
-		cpass = $('#cpassReg').val();
 		
-		if( name == "" || email == "" || pass == "" || cpass == ""){
+		if( name == "" || email == "" || remail == "" || pass == ""){
 			$('#registerResult').text('All fields are required');
 			$('#registerResult').css('display', 'block');
 		} else {
@@ -65,12 +64,7 @@
 				$('#registerResult').css('display', 'block');
 			} else {
 				if(IsValidEmail(email)){
-					if(pass != cpass){
-						$('#registerResult').text("Passwords don't match. Please re-enter");
-						$('#registerResult').css('display', 'block');
-					} else {
-						Dajaxice.mainlab.register(Dajax.process,{'name':name, 'email': email, 'password':pass})
-					}
+					Dajaxice.mainlab.register(Dajax.process,{'name':name, 'email': email, 'password':pass})
 				} else {
 					$('#registerResult').text("Enter a valid email address");
 					$('#registerResult').css('display', 'block');
@@ -96,6 +90,15 @@
 			register();
 		}
 	}
+	
+	function revealPass(){
+		if ($('#displayCheck').is(":checked")){
+			$("#passReg").attr('type','text');
+		} else {
+			$("#passReg").attr('type','password');
+		}
+	}
+	
 </script>
 
 {% block script %}
@@ -204,13 +207,10 @@
 		<div class="control-group">
 			<label class="control-label" for="passReg">Password</label>
 			<div class="controls">
-				<input type="password" id="passReg" placeholder="Password"  onkeypress="registerCheckEnter(event);">
-			</div>
-		</div>
-		<div class="control-group">
-			<label class="control-label" for="cpassReg">Confirm Password</label>
-			<div class="controls">
-				<input type="password" id="cpassReg" placeholder="Confirm Password"  onkeypress="registerCheckEnter(event);">
+				<input type="password" id="passReg" placeholder="Password"  onkeypress="registerCheckEnter(event);"> <br>
+				<label class="checkbox" style="margin-top:8px;">
+					<input type="checkbox" id="displayCheck" onchange="revealPass();"> Display Characters
+				</label>
 			</div>
 		</div>
 	</form>

@@ -6,7 +6,8 @@
 	$( document ).ready(function() {
 		tinyMCE.init({
 			mode: "textareas",
-			theme: "simple"
+			theme: "simple",
+			plugins: "paste"
 		});
 	});
 	</script>
@@ -33,10 +34,12 @@
 	</ul>
 
 	<form method="post" action="/saveProject/" enctype="multipart/form-data">>{% csrf_token %}
-	<div class="resourceContent">
-		<h4>{{project.title|safe}}</h4>
-
+	<div class="container-fluid"><div class="row-fluid">
+		<div class="span8">	
 			<input type="hidden" name="id" value="{{project.id}}">
+			
+			<h5>Title:</h5>
+			<input type="text" name="title" value="{{project.title}}">
 		
 			<h5>Goals:</h5>
 			<textarea name="goals" style="width:100%;">{{project.goals}}</textarea> <br>
@@ -57,46 +60,49 @@
 			</div>
 		
 		
-	<br><br><br></div>
-
-	<div class="sideBox">
-		<b>Contributed by:</b> {{project.author.name}}<br>
-		<b>Time submitted:</b> {{project.timeCreated}}<br>
-		<b>Last modified by:</b> {{project.userModified}} <br>
-		<b>Time modified:</b> {{project.timeModified}}<br><br>
+		</div>
 		
-		<b>Curriculum:</b> {{curricula}}<br>
-		<b>Grade:</b> {{grades}}<br>
-		<b>Subject:</b> {{subjects}}<br>
-		<b>Chapter:</b> {{chapters}}
-	</div>
+		<div class="span4">
+			<div style="background-color:#f5f5f5;padding:10px;margin-bottom:20px;">
+				<b>Contributed by:</b> {{project.author.name}}<br>
+				<b>Time submitted:</b> {{project.timeCreated}}<br>
+				<b>Last modified by:</b> {{project.userModified}} <br>
+				<b>Time modified:</b> {{project.timeModified}}<br><br>
+			
+				<b>Curriculum:</b> {{curriculaRes}}<br>
+				<b>Grade:</b> {{gradesRes}}<br>
+				<b>Subject:</b> {{subjectsRes}}<br>
+				<b>Chapter:</b> {{chaptersRes}}
+			</div>
 	
-	{% if files %}	
-		<div class="sideBox">
-			<h5>Student Handouts</h5>
-			{% for f in files %}
-				<div class="attachment" id="attachment{{forloop.counter}}" style="position:relative;">
-					<a target='_blank' href='{{f.doc.url}}'>
-						<img class='attImageTall' src='/media/images/handout.png'>
-						<div class='attText'>{{f.title}}</div>
-					</a>
-					<button type="button" class="close" onClick="removeAtt({{forloop.counter}},{{f.id}});" style="position:absolute;top:0px;right:20px;">×</button>
+			{% if files %}	
+			<div style="background-color:#f5f5f5;padding:10px;margin-bottom:20px;float:left;width:90%;">
+				<h5>Attachments</h5>
+				{% for f in files %}
+					<div class="attachment" id="attachment{{forloop.counter}}" style="position:relative;">
+						<a target='_blank' href='{{f.doc.url}}'>
+							<img class='attImageTall' src='/media/images/handout.png'>
+							<div class='attText'>{{f.title}}</div>
+						</a>
+						<button type="button" class="close" onClick="removeAtt({{forloop.counter}},{{f.id}});" style="position:absolute;top:0px;right:20px;">×</button>
+					</div>
+				{% endfor %}
+			</div>
+			{% endif %}
+	
+			<div style="background-color:#f5f5f5;padding:10px 20px;">
+				<h5>Upload Files</h5>
+				<div id="uploadBox">
+					<input type="file" name="attachment" />
 				</div>
-			{% endfor %}
+				<a style="cursor:pointer;" onClick="addUpload();">Add another file</a>
+			</div>
 		</div>
-	{% endif %}
-	
-	<div class="sideBox">
-		<h5>Upload Files</h5>
-		<div id="uploadBox">
-			<input type="file" name="attachment" />
-		</div>
-		<a style="cursor:pointer;" onClick="addUpload();">Add another file</a>
-	</div>
+	</div></div>
 	
 	</form>
 	
-	<form method="post" action="/deleteProject/" style="position:absolute;top:730px;left:50px;">{% csrf_token %}
+	<form method="post" action="/deleteProject/" style="position:absolute;top:765px;left:50px;">{% csrf_token %}
 		<input type="hidden" name="id" value="{{project.id}}">
 		<input type="submit" class="btn" name="delete" value="Reject" onClick="return confirm('Confirm delete?');"/>
 	</form>

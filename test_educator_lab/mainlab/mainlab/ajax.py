@@ -2,7 +2,7 @@ from dajax.core import Dajax
 from dajaxice.decorators import dajaxice_register
 from django.contrib.auth import authenticate, login, logout
 #from django.contrib.auth.models import User
-from mainlab.models import MyUser, Curriculum, Grade, Subject, Chapter, Activity, Project, Organizer, File, Link, Comment
+from mainlab.models import MyUser, Curriculum, Grade, Subject, Chapter, Activity, Project, Draft, File, Comment
 #from django.contrib.auth import get_user_model
 from django.conf import settings
 
@@ -261,4 +261,23 @@ def removeAtt(request, type, rid, fid):
 	resource.files.remove(file)
 	return dajax.json()
 	
+
+@dajaxice_register
+def autoSave(request, resourceType, title, goals, materials, lesson):
+	dajax = Dajax()
+        try:
+		d = request.user.draft                                       
+        except:
+		d = Draft(user=request.user)                                 
+                       
+	d.resourceType = resourceType                      
+	d.title = title                                     
+	d.lesson = lesson                                   
+	d.goals = goals                                      
+	d.materials = materials                              
+	d.save()  
+	
+	#dajax.assign('#id_save', 'innerHTML', 'Saved!')
+	
+	return dajax.json()
 	

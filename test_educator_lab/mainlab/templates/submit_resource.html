@@ -14,7 +14,7 @@
 		$("#id_grade").attr('disabled', 'disabled');
                 $("#id_subject").attr('disabled', 'disabled');
                 $("#id_chapter").attr('disabled', 'disabled');
-		if ( selCurId){
+		if (selCurId){
 			Dajaxice.mainlab.curricFind(Dajax.process, {'id' : selCurId});
    		}
 	}
@@ -36,6 +36,19 @@
         	}
 	}
 	
+	function autoSave(){
+		resourceType = $('#id_resourceType option:selected').val();
+		title = $('#id_title').val();
+		goals = tinyMCE.EditorManager.getInstanceById('id_goals').save();
+		materials = tinyMCE.EditorManager.getInstanceById('id_materials').save();
+		lesson = tinyMCE.EditorManager.getInstanceById('id_lesson').save();
+		data = {'resourceType' : resourceType, 'title' : title, 'goals':goals, 'materials':materials, 'lesson':lesson};
+		Dajaxice.mainlab.autoSave(Dajax.process, data);
+		
+		$('#id_save').html('Saved!');
+		$('#id_save').addClass('disabled'); 
+	}
+	
 	
 </script>
 <script type="text/javascript">
@@ -43,12 +56,52 @@
 		$("#id_grade").attr('disabled', 'disabled');
 		$("#id_subject").attr('disabled', 'disabled');
 		$("#id_chapter").attr('disabled', 'disabled');
+	
+		setTimeout(detectChange, 1500);	
+		window.saveReg = setInterval(autoSave, 5000);
+		
+		$('#resTypeHelp').tooltip(); 	
 	});
+
+	function detectChange(){
+		//all input elements 
+		
+		var inputEls = ['#id_curriculum', '#id_grade', '#id_subject', '#id_chapter', '#id_resourceType', '#id_title'];
+		for (el=0; el<inputEls.length; el++){
+			$(inputEls[el]).change(function(){
+				$('#id_save').removeClass('disabled'); 
+                        	$('#id_save').html('Save');
+                        	clearInterval(saveReg);
+			}); 
+			$(inputEls[el]).blur(function(){
+				window.saveReg = setInterval(autoSave, 5000);
+			});
+		}
+
+	
+		//all textareas 
+		
+		var textEls = ['id_goals','id_materials', 'id_lesson'];
+		for (el=0; el<textEls.length; el++){
+			$(tinyMCE.get(textEls[el]).getDoc()).contents().find('body').keypress(function(){
+				$('#id_save').removeClass('disabled'); 
+				$('#id_save').html('Save');
+				clearInterval(saveReg); 
+			});
+			$(tinyMCE.get(textEls[el]).getDoc()).contents().find('body').blur(function(){
+                        	window.saveReg = setInterval(autoSave, 5000);
+                	});
+		}
+		
+				
+	}
 	
 	function addUpload(){
 		$('#uploadBox').append('{{ submit_resource_form.attachment }}');
 	}
+
 </script>
+
 
 
 {% endblock script %}
@@ -57,22 +110,33 @@
 
 {% block content %}
 
-<div class="formContent">
-        
-	{% if "Thank" in message %}
-		<span class="label label-success">{{message}}</span>
+<div class="container-fluid" style="margin-top:30px;"><div class="row-fluid">
+    <div class="span8" style="padding-left:2%;padding-right:2%;">
+	{% if "Thank" in message or "Your" in message %}
+		<div class="alert alert-success" id="loginResult" style="margin-left:3%;margin-right:3%">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			{{message}}
+		</div>
+	{% elif "saved" in message %}
+		<div class="alert alert-info" id="loginResult" style="margin-left:3%;margin-right:3%">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			{{message}}
+		</div>
 	{% else %}
-		<span class="label label-error">{{message}}</span>
+		<div class="alert alert-error" id="loginResult" style="margin-left:3%;margin-right:3%">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			{{message}}
+		</div>
 	{% endif %}
         
 	{% if submit_resource_form %}
-		<form method="POST" action ="." enctype="multipart/form-data" style="padding-left:15px">
+		<form method="POST" action ="." id="submitResource" enctype="multipart/form-data" style="padding-left:15px;width:100%">
 		{% csrf_token %}       
 			<span style="color:#ad1d28">
 				{{ submit_resource_form.non_field_errors }}
 			</span>
 		
-			<div style="display:table; margin:0 auto;">
+			<div style="display:table; margin:0 auto;width:100%">
 				<div class="formLineElement">
 					<span style="color:#ad1d28">
 						{{ submit_resource_form.curriculum.errors }}
@@ -109,7 +173,10 @@
 					<span style="color:#ad1d28">
 						{{ submit_resource_form.resourceType.errors }}
 					</span>
-					<label for="id_resourceType"><b>Resource Type</b></label>
+					<label for="id_resourceType">
+						<b>Resource Type</b>
+						<img src="/media/images/tooltipHelp.jpg" style="float:right" id="resTypeHelp" data-toggle="tooltip" title="Projects are collections of structured activities. Activities are isolated learning things."/>
+					</label>
 					{{ submit_resource_form.resourceType }}
 				</div>
                     
@@ -122,9 +189,9 @@
 				</div>
 			</div>
 
-			<div style="display:table; margin:0 auto;margin-top:20px;">
-				<div style="display:table; margin:0 auto;">
-					<div class="formLineElement">
+			<div style="display:table; margin:0 auto;width:100%;">
+				<div style="display:table; margin:0 auto;width:100%">
+					<div class="formLineElement" style="width:100%">
 						<span style="color:#ad1d28">
 							{{ submit_resource_form.goals.errors }}
 						</span>
@@ -133,8 +200,8 @@
 					</div>
 				</div>
 				
-				<div style="display:table; margin:0 auto;">
-					<div class="formLineElement">
+				<div style="display:table; margin:0 auto;width:100%;">
+					<div class="formLineElement" style="width:100%">
 						<span style="color:#ad1d28">
 							{{ submit_resource_form.materials.errors }}
 						</span>
@@ -143,7 +210,7 @@
 					</div>
 				</div>
 				
-				<div class="formLineElement">
+				<div class="formLineElement" style="width:100%">
 					<span style="color:#ad1d28">
 						{{ submit_resource_form.lesson.errors }}
 					</span>
@@ -152,7 +219,7 @@
 				</div>
 			</div>
                 
-			<div id="attach" style="float:left;width:400px;padding:20px 40px">
+			<div id="attach" style="float:left;width:40%;padding:20px 0px">
 				<div class="formLineElement">
 					{{ submit_resource.form.attachment.errors }}
 					<label for="id_attachment"><b>Attachment</b></label>
@@ -162,40 +229,33 @@
 					<a style="cursor:pointer;" onClick="addUpload();">Add another file</a>
 				</div>
 			</div>
-			<div style="float:right;width:160px;padding:40px 40px">
-				<div class="formLineElement">
-					<button type="submit" class="btn btn-danger" name="submit"> Submit Resource</button>
+			<div style="float:right;width:55%;padding:40px 5% 40px 0px;">
+				<div style="float:right">
+					<button type="submit" class="btn" name="save" style="margin-right:5px;" id="id_save">Save</button>
+					<button type="submit" class="btn btn-danger" name="submit" id="id_submit">Submit</button>
 				</div>
 			</div>
 				
 		</form>
 	{% endif %}
         
-</div> <!-- formContent -->
+	</div> 
         
-        
-<div class="sideBox" style="margin:40px 30px 10px 30px;padding-top:10px;">
-    <!-- <h4>Help build Educator Lab by submitting a resource!</h4>
-    <p> Thank you for helping us develop new content at Educator Lab. It's teachers such as yourselves who are responsible for growing and supporting this site, and we appreciate every contribution you make.
-    </p>
-    <p>Contributing to The Educator Lab is easy.</p>
-        <ol><br>
-            <li>Complete the form on the left, filling in as many details as possible. Then hit Submit.</li><br>
-            <li>Our content editors will try to make simple edits and then publish your content. If the resource needs more detailed edits, editors may get back in touch with you to clarify details.</li>
-        </ol> -->
-	<br><h4>Help build Educator Lab!</h4><br>
-    <p>It's teachers such as yourselves who are responsible for growing and supporting this site, and we appreciate every contribution you make.</p>
-	<p>Contributing to The Educator Lab is easy:</p>
-	<ol><br>
-		<li>Complete the form on the left, filling in as many details as possible.</li><br>
-		<li>Our experienced content editors will check your submission and make minor edits, if necessary, before publishing.</li><br>
-	    <li>You will receive an email when your resource is published.</li>
-	</ol>	
-	<br>
+    <div class="span4" style="background-color: #f5f5f5;padding:20px;padding-top:10px;">
+		<br><h4>Help Build Educator Lab!</h4><br>
+		<p>It's teachers such as yourselves who are responsible for growing and supporting this site, and we appreciate every contribution you make.</p>
+		<p>Contributing to The Educator Lab is easy:</p>
+		<ol><br>
+			<li>Complete the form on the left, filling in as many details as possible.</li><br>
+			<li>Our experienced content editors will check your submission and make minor edits, if necessary, before publishing.</li><br>
+			<li>You will receive an email when your resource is published.</li>
+		</ol>	
+		<br>
 		
-	<div style="font-size:small;">Please Note: We will try our best to publish your resource, but we cannot guarantee that it will appear on our site.</div>
-	<p style="padding-bottom: 20px"></p>
-</div>
-        
+		<div style="font-size:small;">Please Note: We will try our best to publish your resource, but we cannot guarantee that it will appear on our site.</div>
+		<p style="padding-bottom: 20px"></p>
+	</div>
+
+</div></div>        
 {% endblock content %}
         

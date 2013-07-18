@@ -26,7 +26,7 @@
 			paste_max_consecutive_linebreaks: 2,
 			paste_text_use_dialog : false,
 			paste_text_sticky : false,
-			paste_text_sticky_default : false,
+			paste_text_sticky_default : true,
 			paste_text_notifyalways : false,
 			paste_text_linebreaktype : "combined",
 			paste_text_replacements : [

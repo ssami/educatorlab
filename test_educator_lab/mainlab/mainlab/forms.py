@@ -29,10 +29,10 @@ class SubmitResourceForm(forms.Form):
 	grade = GradeModelChoiceField(queryset=Grade.objects.all(), empty_label="None")
     	subject = SubjectModelChoiceField(queryset=Subject.objects.all(), empty_label="None")
 	chapter = forms.ModelChoiceField(queryset=Chapter.objects.all(), empty_label="None")
-    	goals = forms.CharField(widget=TinyMCE(attrs={'rows':1, 'cols':20, 'class':'textarea span8'}))
+    	goals = forms.CharField(widget=TinyMCE(attrs={'rows':1, 'cols':20, 'class':'htmlEdit'}))
 	title = forms.CharField(widget=forms.TextInput)
-	materials = forms.CharField(widget=TinyMCE(attrs={'rows':1, 'cols':20, 'class':'textarea span8'}))
-	lesson = forms.CharField(widget=TinyMCE(attrs={'rows':6, 'cols':50, 'class':'textarea span8'}))
+	materials = forms.CharField(widget=TinyMCE(attrs={'rows':1, 'cols':20, 'class':'htmlEdit'}))
+	lesson = forms.CharField(widget=TinyMCE(attrs={'rows':6, 'cols':50, 'class':'htmlEdit'}))
 	attachment = forms.Field(widget=forms.FileInput, required=False)
 
 
@@ -40,7 +40,7 @@ class SubmitResourceForm(forms.Form):
 class SuggestForm(forms.Form):
 	name = forms.CharField(max_length=100, required=False)
 	email = forms.EmailField(max_length=100, required=False)
-	suggestion = forms.CharField(widget=forms.Textarea(attrs={'rows':7, 'cols':50, 'class':'textarea span6'}))	
+	suggestion = forms.CharField(widget=forms.Textarea(attrs={'rows':7, 'cols':50, 'class':'htmlEdit'}))	
 
 class DivErrorList(ErrorList): 
 	def __unicode__(self): 

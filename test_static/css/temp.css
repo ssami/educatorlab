@@ -21,18 +21,13 @@ hr {
 #wrapper {
     margin-left:auto;
     margin-right:auto;
-    min-width:1260px;
+    min-width:800px;
 	height: 100%;
 }
 
 i , em{
 	color: #ad1d28;
 
-}
-
-.mainList{
-	padding:0px 40px 0px 40px;
-	width:740px;
 }
 
 .mainListHead{
@@ -81,33 +76,16 @@ i , em{
 	top:8px;
 }
 
-.resourceContent{
-	padding: 20px 50px 40px 50px;
-	width: 700px;
-	float:left;
-	position:relative;
-}
-
 .authorDet{
-	width:inherit;
+	width:96%;
 	margin: 15px 0px 15px 0px;
-	padding:10px;
-	background-color: #d6dbe1;
+	padding:10px 2%;
+	background-color: #f5f5f5;
 }
 
 .commentsEmpty{
 	margin-left: 10px;
 	padding-top: 15px;
-}
-
-.sideBox{
-	float:right;
-	width: 320px;
-	padding: 30px;
-	padding-top: 15px;
-	padding-bottom:15px;
-	margin: 20px 40px 10px 40px;
-	background-color: #eceff1;
 }
 
 .logoText{
@@ -252,6 +230,13 @@ i , em{
 	width: 130px;
 }
 
+.attachmentNew{
+	float:left;
+	text-align:center;
+	width: 80%;
+	padding:10px 10%;
+}
+
 .attText{
 	font-size:12px;
 }
@@ -331,19 +316,6 @@ i , em{
   background-color: #7b8b9f;
 }
 
-
-
-
-.formContent{
-	/* background-color: #eceff1; */
-	padding: 25px 20px 20px 10px;
-	margin:20px 10px 20px 40px;
-	width: 740px;
-	float:left;
-	position:relative;
-}
-
-
 .formLineElement {
         float: left;
         padding: 10px;
@@ -353,5 +325,8 @@ i , em{
 	/* background-color: #81161e; */
 	background-color: #c3212d;
 }
-	
 
+.htmlEdit{
+	width:90%;
+	max-width:695px;
+}

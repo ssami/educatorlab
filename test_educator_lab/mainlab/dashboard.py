@@ -35,7 +35,7 @@ class CustomIndexDashboard(Dashboard):
 			title = "Teaching Material",
 			collapsible=True,
 			column=1,
-			models =('mainlab.models.Activity','mainlab.models.Project','mainlab.models.Organizer'),
+			models =('mainlab.models.Activity','mainlab.models.Project'),
 		))
 		
 		# append an app list module for "Applications"
@@ -43,7 +43,7 @@ class CustomIndexDashboard(Dashboard):
 			title = "Resources",
 			collapsible=True,
 			column=1,
-			models =('mainlab.models.Link', 'mainlab.models.File', 'mainlab.models.Foldable', 'mainlab.models.GraphicOrganizer'),
+			models =('mainlab.models.File',),
 		))
 		
 		# # append an app list module for "Applications"

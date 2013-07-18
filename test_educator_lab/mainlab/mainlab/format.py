@@ -9,7 +9,11 @@ def FormatEmail(form, request):
 
 
 def FormatSuggest(form, request):
-	fromEmail = request.user.email
-	fromPerson = request.user.name
-	message = 'From:' + fromPerson + '\n' + 'Email: ' + fromEmail + '\n'
+	if request.user.is_authenticated():
+		fromEmail = request.user.email
+		fromPerson = request.user.name
+	else:
+		fromEmail = 'Unknown'
+		fromPerson = 'Anonymous'
+	message = 'From:' + fromPerson + '\n' + 'Email: ' + fromEmail + '\n' + 'Feedback:' + form.cleaned_data['suggestion'] + '\n'
 	return message 

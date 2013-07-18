@@ -6,6 +6,12 @@ import os
 #if (os.path.isfile("../.env-prod")) :
 #	DEV = False
 
+MAINTENANCE = False
+
+if MAINTENANCE: 
+	INDEX_FILE = "index_maintenance.html" 
+else: 
+	INDEX_FILE = "index.html"
 
 DEV = True
 if DEV:
@@ -184,7 +190,8 @@ TINYMCE_DEFAULT_CONFIG ={
     'theme_advanced_buttons1': "bold,italic,underline,separator,bullist,separator,outdent,indent,separator,undo,redo",
     'theme_advanced_buttons2': "",
     'theme_advanced_buttons3': "",
-    'theme_advanced_statusbar_location' : 'none'
+    'theme_advanced_statusbar_location' : 'none',
+	'plugins': 'paste'
 }
 
 # A sample logging configuration. The only tangible logging
@@ -262,3 +269,9 @@ if DEV:
 	SITE_URL = "http://tagoreinitiative.com/"
 else: 
 	SITE_URL = "http://educatorlab.com/"
+	
+# Close the session when user closes the browser
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+# Set time zone to Indian Standard Time
+TIME_ZONE = 'Asia/Kolkata'

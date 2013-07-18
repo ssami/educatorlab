@@ -127,58 +127,7 @@ class File(models.Model):
 		storage, path = self.doc.storage, self.doc.path
 		super(File, self).delete(*args, **kwargs)
 		storage.delete(path)
-        
 		
-class Link(models.Model):
-	title = models.CharField(max_length=200)
-	url = models.URLField()
-	description = HTMLField(blank=True)
-	def __unicode__(self):
-		return self.title	
-
-
-class Item(models.Model):
-	name = models.CharField(max_length=200)
-	type = models.CharField(max_length=200)
-	price = models.DecimalField(max_digits=5, decimal_places=2)
-	def __unicode__(self):
-		return self.name
-	def item_price(self):
-		return self.price
-
-
-class Foldable(models.Model):
-	title = models.CharField(max_length=200)
-	titleTag = models.CharField(max_length=70, blank=True)
-	instructions = HTMLField()
-	purpose = models.CharField(max_length=200, default='')
-	image = models.FileField(upload_to='foldables/', default='foldables/pdf.png')
-	def __unicode__(self):
-		return self.title
-	def save(self, *args, **kwargs):
-		''' On save, update timestamps '''
-		if not self.id:
-			self.timeCreated = datetime.datetime.today()
-		self.timeModified = datetime.datetime.today()
-		super(Foldable, self).save(*args, **kwargs)
-
-
-class GraphicOrganizer(models.Model):
-	title = models.CharField(max_length=200)
-	titleTag = models.CharField(max_length=70, blank=True)
-	instructions = HTMLField()
-	purpose = models.CharField(max_length=200)
-	file = models.FileField(upload_to='graphicOrgs/', default='graphicOrgs/pdf.png')
-	def __unicode__(self):
-		return self.title
-	def save(self, *args, **kwargs):
-		''' On save, update timestamps '''
-		if not self.id:
-			self.timeCreated = datetime.datetime.today()
-		self.timeModified = datetime.datetime.today()
-		super(GraphicOrganizer, self).save(*args, **kwargs)
-
-
 class Activity(models.Model):
 	author = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True)
 	manager = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, related_name='+')
@@ -188,17 +137,12 @@ class Activity(models.Model):
 	chapters = models.ManyToManyField(Chapter)
 	# contrib
 	goals = HTMLField()
-	time = HTMLField()
 	# contrib
 	materials = HTMLField()
 	# contrib
 	lesson = HTMLField()
-	links = models.ManyToManyField(Link, blank=True)
 	# attachments: contrib
 	files = models.ManyToManyField(File, blank=True)
-	items = models.ManyToManyField(Item, blank=True)
-	foldables = models.ManyToManyField(Foldable, blank=True)
-	graphicOrgs = models.ManyToManyField(GraphicOrganizer, blank=True)
 	timeCreated = models.DateTimeField(editable=False)
 	timeModified = models.DateTimeField(editable=False)
 	userModified = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, related_name='+')
@@ -226,17 +170,12 @@ class Project(models.Model):
 	chapters = models.ManyToManyField(Chapter)
 	# contrib
 	goals = HTMLField()
-	time = HTMLField()
 	# contrib
 	materials = HTMLField()
 	# contrib
 	instructions = HTMLField()
-	rubric = HTMLField()
 	# attachments: contrib
-	links = models.ManyToManyField(Link, blank=True)
 	files = models.ManyToManyField(File, blank=True)
-	foldables = models.ManyToManyField(Foldable, blank=True)
-	graphicOrgs = models.ManyToManyField(GraphicOrganizer, blank=True)
 	timeCreated = models.DateTimeField(editable=False)
 	timeModified = models.DateTimeField(editable=False)
 	userModified = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, related_name='+')
@@ -253,20 +192,22 @@ class Project(models.Model):
 			self.timeCreated = datetime.datetime.today()
 		self.timeModified = datetime.datetime.today()
 		super(Project, self).save(*args, **kwargs)
-		
-class Organizer(models.Model):
+
+class Worksheet(models.Model):
 	author = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True)
+	manager = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, related_name='+')
+	# contrib
 	title = models.CharField(max_length=200)
 	titleTag = models.CharField(max_length=70, blank=True)
 	chapters = models.ManyToManyField(Chapter)
-	links = models.ManyToManyField(Link, blank=True)
+	# contrib
+	description = HTMLField()
+	# attachments: contrib
 	files = models.ManyToManyField(File, blank=True)
-	foldables = models.ManyToManyField(Foldable, blank=True)
-	graphicOrgs = models.ManyToManyField(GraphicOrganizer, blank=True)
-	instructions = HTMLField()
 	timeCreated = models.DateTimeField(editable=False)
 	timeModified = models.DateTimeField(editable=False)
 	userModified = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, related_name='+')
+	
 	rating = RatingField(range=5, allow_anonymous = True)
 	
 	publish = models.BooleanField(default=False)
@@ -278,14 +219,12 @@ class Organizer(models.Model):
 		if not self.id:
 			self.timeCreated = datetime.datetime.today()
 		self.timeModified = datetime.datetime.today()
-		super(Organizer, self).save(*args, **kwargs)
+		super(Worksheet, self).save(*args, **kwargs)
 		
-				
 # Comments Feature
 class Comment(models.Model):
 	activity = models.ForeignKey(Activity, null=True, blank=True)
 	project = models.ForeignKey(Project, null=True, blank=True)
-	organizer = models.ForeignKey(Organizer, null=True, blank=True)
 	#name = models.CharField(max_length=300)
 	user = models.ForeignKey(settings.AUTH_USER_MODEL)
 	comment = models.TextField()
@@ -299,3 +238,10 @@ class Comment(models.Model):
 		super(Comment, self).save(*args, **kwargs)
 
 
+class Draft(models.Model):
+	user = models.OneToOneField(settings.AUTH_USER_MODEL, primary_key=True)
+	resourceType = models.CharField(max_length=50, blank=True)
+	title = models.CharField(max_length=200, blank=True)
+	goals = HTMLField(blank=True)
+	materials = HTMLField(blank=True)
+	lesson = HTMLField(blank=True)
