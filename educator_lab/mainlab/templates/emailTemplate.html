@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block script %}
+	<script type="text/javascript" src="/static/tiny_mce/tiny_mce.js"></script>
+	<script type="text/javascript">
+	$( document ).ready(function() {
+		tinyMCE.init({
+			mode: "textareas",
+			theme: "simple"
+		});
+	});
+	</script>
+{% endblock script %}
+
+{% block content %}
+
+	<div style="padding:50px 100px;">
+		<h4>Send Email</h4><br>
+		
+		<form method="post" action="/sendEmail/">{% csrf_token %}
+		
+			<input type="hidden" name="email" value="{{email}}">
+		
+			<h5>Subject:</h5>
+			<input type="text" name="subject" value="{{subject}}" >
+		
+			<h5>Message:</h5>		
+			<textarea name="message" style="width:100%">
+				Dear {{personName}}, <br><br>
+				{{message}} <br><br>
+				Regards,<br>
+				The Educator Lab Team
+			</textarea><br>
+			
+			<div class="text-right">
+				<input type="submit" class="btn btn-danger" name="sendemail" value="Send Email" style="margin-right:10px;"/>
+				<a href="/manager/" class="btn">Don't Send</a>
+			</div>
+	
+		</form>
+	
+	<br><br><br></div>
+
+	
+{% endblock content %}

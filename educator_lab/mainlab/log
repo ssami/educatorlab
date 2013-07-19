@@ -1,0 +1,1619 @@
+execve("/usr/bin/pg_dump", ["pg_dump", "--no-password", "-U", "educatorlab", "-f", "dump_test.sql", "educatorlab"], [/* 25 vars */]) = 0
+brk(0)                                  = 0xad1000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a88e000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY)      = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=61261, ...}) = 0
+mmap(NULL, 61261, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fb24a87f000
+close(3)                                = 0
+open("/usr/pgsql-9.1/lib/libpq.so.5", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300\223\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=180456, ...}) = 0
+mmap(NULL, 2275832, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb24a444000
+mprotect(0x7fb24a46d000, 2097152, PROT_NONE) = 0
+mmap(0x7fb24a66d000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x29000) = 0x7fb24a66d000
+close(3)                                = 0
+open("/lib64/libz.so.1", O_RDONLY)      = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 !\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=88600, ...}) = 0
+mmap(NULL, 2183696, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb24a22e000
+mprotect(0x7fb24a243000, 2093056, PROT_NONE) = 0
+mmap(0x7fb24a442000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000) = 0x7fb24a442000
+close(3)                                = 0
+open("/lib64/libc.so.6", O_RDONLY)      = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360\355\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1916568, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a87e000
+mmap(NULL, 3745960, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb249e9b000
+mprotect(0x7fb24a025000, 2093056, PROT_NONE) = 0
+mmap(0x7fb24a224000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x189000) = 0x7fb24a224000
+mmap(0x7fb24a229000, 18600, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb24a229000
+close(3)                                = 0
+open("/usr/lib64/libssl.so.10", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0J\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=380744, ...}) = 0
+mmap(NULL, 2476144, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb249c3e000
+mprotect(0x7fb249c93000, 2097152, PROT_NONE) = 0
+mmap(0x7fb249e93000, 32768, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x55000) = 0x7fb249e93000
+close(3)                                = 0
+open("/usr/lib64/libcrypto.so.10", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@\312\5\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1662832, ...}) = 0
+mmap(NULL, 3773576, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb2498a4000
+mprotect(0x7fb249a18000, 2093056, PROT_NONE) = 0
+mmap(0x7fb249c17000, 143360, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x173000) = 0x7fb249c17000
+mmap(0x7fb249c3a000, 13448, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb249c3a000
+close(3)                                = 0
+open("/lib64/libgssapi_krb5.so.2", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\254\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=277704, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a87d000
+mmap(NULL, 2373600, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb249660000
+mprotect(0x7fb2496a1000, 2097152, PROT_NONE) = 0
+mmap(0x7fb2498a1000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x41000) = 0x7fb2498a1000
+close(3)                                = 0
+open("/lib64/libldap_r-2.4.so.2", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p\t\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=335264, ...}) = 0
+mmap(NULL, 2440104, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb24940c000
+mprotect(0x7fb24945b000, 2093056, PROT_NONE) = 0
+mmap(0x7fb24965a000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4e000) = 0x7fb24965a000
+mmap(0x7fb24965e000, 7080, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb24965e000
+close(3)                                = 0
+open("/lib64/libpthread.so.0", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`\\\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=142464, ...}) = 0
+mmap(NULL, 2212768, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb2491ef000
+mprotect(0x7fb249206000, 2097152, PROT_NONE) = 0
+mmap(0x7fb249406000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17000) = 0x7fb249406000
+mmap(0x7fb249408000, 13216, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb249408000
+close(3)                                = 0
+open("/lib64/libkrb5.so.3", O_RDONLY)   = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\264\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=941920, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a87c000
+mmap(NULL, 3037856, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb248f09000
+mprotect(0x7fb248fe4000, 2093056, PROT_NONE) = 0
+mmap(0x7fb2491e3000, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xda000) = 0x7fb2491e3000
+close(3)                                = 0
+open("/lib64/libcom_err.so.2", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360\23\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=14664, ...}) = 0
+mmap(NULL, 2109872, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb248d05000
+mprotect(0x7fb248d08000, 2093056, PROT_NONE) = 0
+mmap(0x7fb248f07000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fb248f07000
+close(3)                                = 0
+open("/lib64/libk5crypto.so.3", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320C\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=174840, ...}) = 0
+mmap(NULL, 2273704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb248ad9000
+mprotect(0x7fb248b02000, 2097152, PROT_NONE) = 0
+mmap(0x7fb248d02000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x29000) = 0x7fb248d02000
+mmap(0x7fb248d04000, 424, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb248d04000
+close(3)                                = 0
+open("/lib64/libdl.so.2", O_RDONLY)     = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340\r\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=19536, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a87b000
+mmap(NULL, 2109696, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb2488d5000
+mprotect(0x7fb2488d7000, 2097152, PROT_NONE) = 0
+mmap(0x7fb248ad7000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fb248ad7000
+close(3)                                = 0
+open("/lib64/libkrb5support.so.0", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@*\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=43728, ...}) = 0
+mmap(NULL, 2139216, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb2486ca000
+mprotect(0x7fb2486d4000, 2093056, PROT_NONE) = 0
+mmap(0x7fb2488d3000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9000) = 0x7fb2488d3000
+close(3)                                = 0
+open("/lib64/libkeyutils.so.1", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360\v\340!6\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=12592, ...}) = 0
+mmap(0x3621e00000, 2105424, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3621e00000
+mprotect(0x3621e02000, 2093056, PROT_NONE) = 0
+mmap(0x3622001000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x3622001000
+close(3)                                = 0
+open("/lib64/libresolv.so.2", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\00009\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=110960, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a87a000
+mmap(NULL, 2202248, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb2484b0000
+mprotect(0x7fb2484c6000, 2097152, PROT_NONE) = 0
+mmap(0x7fb2486c6000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x16000) = 0x7fb2486c6000
+mmap(0x7fb2486c8000, 6792, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb2486c8000
+close(3)                                = 0
+open("/lib64/liblber-2.4.so.2", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\3005\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=60512, ...}) = 0
+mmap(NULL, 2155816, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb2482a1000
+mprotect(0x7fb2482af000, 2093056, PROT_NONE) = 0
+mmap(0x7fb2484ae000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xd000) = 0x7fb2484ae000
+close(3)                                = 0
+open("/usr/lib64/libssl3.so", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@\224\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=221568, ...}) = 0
+mmap(NULL, 2318320, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb24806b000
+mprotect(0x7fb24809e000, 2097152, PROT_NONE) = 0
+mmap(0x7fb24829e000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x33000) = 0x7fb24829e000
+close(3)                                = 0
+open("/usr/lib64/libsmime3.so", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\234\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=181168, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a879000
+mmap(NULL, 2276448, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb247e3f000
+mprotect(0x7fb247e67000, 2097152, PROT_NONE) = 0
+mmap(0x7fb248067000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7fb248067000
+close(3)                                = 0
+open("/usr/lib64/libnss3.so", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\220\1\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1284048, ...}) = 0
+mmap(NULL, 3385160, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb247b04000
+mprotect(0x7fb247c37000, 2093056, PROT_NONE) = 0
+mmap(0x7fb247e36000, 28672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x132000) = 0x7fb247e36000
+mmap(0x7fb247e3d000, 5960, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb247e3d000
+close(3)                                = 0
+open("/usr/lib64/libnssutil3.so", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20\273\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=175288, ...}) = 0
+mmap(NULL, 2271784, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb2478d9000
+mprotect(0x7fb2478fe000, 2093056, PROT_NONE) = 0
+mmap(0x7fb247afd000, 28672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x24000) = 0x7fb247afd000
+close(3)                                = 0
+open("/lib64/libplds4.so", O_RDONLY)    = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340\16\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=14560, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a878000
+mmap(NULL, 2109776, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb2476d5000
+mprotect(0x7fb2476d8000, 2093056, PROT_NONE) = 0
+mmap(0x7fb2478d7000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fb2478d7000
+close(3)                                = 0
+open("/lib64/libplc4.so", O_RDONLY)     = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20\24\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=18720, ...}) = 0
+mmap(NULL, 2113912, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb2474d0000
+mprotect(0x7fb2474d4000, 2093056, PROT_NONE) = 0
+mmap(0x7fb2476d3000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fb2476d3000
+close(3)                                = 0
+open("/lib64/libnspr4.so", O_RDONLY)    = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@\321\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=240592, ...}) = 0
+mmap(NULL, 2346304, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb247293000
+mprotect(0x7fb2472cc000, 2093056, PROT_NONE) = 0
+mmap(0x7fb2474cb000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x38000) = 0x7fb2474cb000
+mmap(0x7fb2474ce000, 7488, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb2474ce000
+close(3)                                = 0
+open("/usr/lib64/libsasl2.so.2", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340F \0356\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=108728, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a877000
+mmap(0x361d200000, 2201520, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x361d200000
+mprotect(0x361d219000, 2093056, PROT_NONE) = 0
+mmap(0x361d418000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18000) = 0x361d418000
+close(3)                                = 0
+open("/lib64/libselinux.so.1", O_RDONLY) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0PX\240\0346\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=124624, ...}) = 0
+mmap(0x361ca00000, 2221912, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x361ca00000
+mprotect(0x361ca1d000, 2093056, PROT_NONE) = 0
+mmap(0x361cc1c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c000) = 0x361cc1c000
+mmap(0x361cc1e000, 1880, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x361cc1e000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a876000
+open("/lib64/libcrypt.so.1", O_RDONLY)  = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\f\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=40400, ...}) = 0
+mmap(NULL, 2318816, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb24705c000
+mprotect(0x7fb247063000, 2097152, PROT_NONE) = 0
+mmap(0x7fb247263000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7000) = 0x7fb247263000
+mmap(0x7fb247265000, 184800, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb247265000
+close(3)                                = 0
+open("/lib64/libfreebl3.so", O_RDONLY)  = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\2602 \0366\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=386040, ...}) = 0
+mmap(0x361e200000, 2496224, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x361e200000
+mprotect(0x361e25d000, 2093056, PROT_NONE) = 0
+mmap(0x361e45c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5c000) = 0x361e45c000
+mmap(0x361e45e000, 14048, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x361e45e000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a875000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a874000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a873000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a871000
+arch_prctl(ARCH_SET_FS, 0x7fb24a8717c0) = 0
+mprotect(0x361e45c000, 4096, PROT_READ) = 0
+mprotect(0x7fb247263000, 4096, PROT_READ) = 0
+mprotect(0x361cc1c000, 4096, PROT_READ) = 0
+mprotect(0x361d418000, 4096, PROT_READ) = 0
+mprotect(0x7fb2474cb000, 4096, PROT_READ) = 0
+mprotect(0x7fb2476d3000, 4096, PROT_READ) = 0
+mprotect(0x7fb2478d7000, 4096, PROT_READ) = 0
+mprotect(0x7fb247afd000, 24576, PROT_READ) = 0
+mprotect(0x7fb247e36000, 20480, PROT_READ) = 0
+mprotect(0x7fb248067000, 12288, PROT_READ) = 0
+mprotect(0x7fb24829e000, 8192, PROT_READ) = 0
+mprotect(0x7fb2484ae000, 4096, PROT_READ) = 0
+mprotect(0x7fb2486c6000, 4096, PROT_READ) = 0
+mprotect(0x3622001000, 4096, PROT_READ) = 0
+mprotect(0x7fb2488d3000, 4096, PROT_READ) = 0
+mprotect(0x7fb248ad7000, 4096, PROT_READ) = 0
+mprotect(0x7fb248d02000, 4096, PROT_READ) = 0
+mprotect(0x7fb248f07000, 4096, PROT_READ) = 0
+mprotect(0x7fb2491e3000, 40960, PROT_READ) = 0
+mprotect(0x7fb249406000, 4096, PROT_READ) = 0
+mprotect(0x7fb24965a000, 8192, PROT_READ) = 0
+mprotect(0x7fb2498a1000, 4096, PROT_READ) = 0
+mprotect(0x7fb249c17000, 102400, PROT_READ) = 0
+mprotect(0x7fb249e93000, 12288, PROT_READ) = 0
+mprotect(0x7fb24a224000, 16384, PROT_READ) = 0
+mprotect(0x7fb24a442000, 4096, PROT_READ) = 0
+mprotect(0x7fb24a88f000, 4096, PROT_READ) = 0
+munmap(0x7fb24a87f000, 61261)           = 0
+set_tid_address(0x7fb24a871a90)         = 27862
+set_robust_list(0x7fb24a871aa0, 0x18)   = 0
+futex(0x7fff636af28c, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x7fff636af28c, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, NULL, 7fb24a8717c0) = -1 EAGAIN (Resource temporarily unavailable)
+rt_sigaction(SIGRTMIN, {0x7fb2491f4ae0, [], SA_RESTORER|SA_SIGINFO, 0x7fb2491fe500}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {0x7fb2491f4b70, [], SA_RESTORER|SA_RESTART|SA_SIGINFO, 0x7fb2491fe500}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+getrlimit(RLIMIT_STACK, {rlim_cur=10240*1024, rlim_max=RLIM_INFINITY}) = 0
+statfs("/selinux", {f_type="EXT2_SUPER_MAGIC", f_bsize=4096, f_blocks=478646881, f_bfree=432933549, f_bavail=408619706, f_files=121569280, f_ffree=119076499, f_fsid={-1965885066, 1011044204}, f_namelen=255, f_frsize=4096}) = 0
+brk(0)                                  = 0xad1000
+brk(0xaf2000)                           = 0xaf2000
+open("/proc/filesystems", O_RDONLY)     = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a88d000
+read(3, "nodev\tsysfs\nnodev\trootfs\nnodev\tb"..., 1024) = 310
+read(3, "", 1024)                       = 0
+close(3)                                = 0
+munmap(0x7fb24a88d000, 4096)            = 0
+open("/usr/lib/locale/locale-archive", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=99154480, ...}) = 0
+mmap(NULL, 99154480, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fb2411cc000
+close(3)                                = 0
+getcwd("/home/sumitasami/webapps/educator_lab/mainlab", 1024) = 46
+stat("/usr/local/bin/pg_dump", 0x7fff636adbb0) = -1 ENOENT (No such file or directory)
+stat("/bin/pg_dump", 0x7fff636adbb0)    = -1 ENOENT (No such file or directory)
+stat("/usr/bin/pg_dump", {st_mode=S_IFREG|0755, st_size=312432, ...}) = 0
+access("/usr/bin/pg_dump", R_OK)        = 0
+access("/usr/bin/pg_dump", X_OK)        = 0
+getcwd("/home/sumitasami/webapps/educator_lab/mainlab", 1024) = 46
+chdir("/usr/bin")                       = 0
+lstat("pg_dump", {st_mode=S_IFLNK|0777, st_size=31, ...}) = 0
+readlink("pg_dump", "/etc/alternatives/pgsql-pg_dump", 1024) = 31
+chdir("/etc/alternatives")              = 0
+lstat("pgsql-pg_dump", {st_mode=S_IFLNK|0777, st_size=26, ...}) = 0
+readlink("pgsql-pg_dump", "/usr/pgsql-9.1/bin/pg_dump"..., 1024) = 26
+chdir("/usr/pgsql-9.1/bin")             = 0
+lstat("pg_dump", {st_mode=S_IFREG|0755, st_size=312432, ...}) = 0
+getcwd("/usr/pgsql-9.1/bin", 1024)      = 19
+chdir("/home/sumitasami/webapps/educator_lab/mainlab") = 0
+stat("/home/sumitasami/webapps/educator_lab/mainlab/.pgpass", {st_mode=S_IFREG|0600, st_size=35, ...}) = 0
+open("/home/sumitasami/webapps/educator_lab/mainlab/.pgpass", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0600, st_size=35, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a88d000
+read(3, "*:*:*:educatorlab:tagoreinitiati"..., 4096) = 35
+close(3)                                = 0
+munmap(0x7fb24a88d000, 4096)            = 0
+socket(PF_FILE, SOCK_STREAM, 0)         = 3
+fcntl(3, F_SETFL, O_RDONLY|O_NONBLOCK)  = 0
+fcntl(3, F_SETFD, FD_CLOEXEC)           = 0
+connect(3, {sa_family=AF_FILE, path="/tmp/.s.PGSQL.5432"}, 110) = 0
+getsockopt(3, SOL_SOCKET, SO_ERROR, [3369164267596021760], [4]) = 0
+getsockname(3, {sa_family=AF_FILE, NULL}, [2]) = 0
+poll([{fd=3, events=POLLOUT|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+sendto(3, "\0\0\0H\0\3\0\0user\0educatorlab\0databas"..., 72, MSG_NOSIGNAL, NULL, 0) = 72
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "R\0\0\0\10\0\0\0\3", 16384, 0, NULL, NULL) = 9
+sendto(3, "p\0\0\0\25tagoreinitiative\0", 22, MSG_NOSIGNAL, NULL, 0) = 22
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "R\0\0\0\10\0\0\0\0S\0\0\0\35application_name\0p"..., 16384, 0, NULL, NULL) = 329
+sendto(3, "Q\0\0\0\30SET DATESTYLE = ISO\0", 25, MSG_NOSIGNAL, NULL, 0) = 25
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "S\0\0\0\27DateStyle\0ISO, MDY\0C\0\0\0\10SET"..., 16384, 0, NULL, NULL) = 39
+sendto(3, "Q\0\0\0!SET INTERVALSTYLE = POSTGRE"..., 34, MSG_NOSIGNAL, NULL, 0) = 34
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "S\0\0\0\33IntervalStyle\0postgres\0C\0\0\0"..., 16384, 0, NULL, NULL) = 43
+sendto(3, "Q\0\0\0 SET extra_float_digits TO 3"..., 33, MSG_NOSIGNAL, NULL, 0) = 33
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\10SET\0Z\0\0\0\5I", 16384, 0, NULL, NULL) = 15
+sendto(3, "Q\0\0\0$SET synchronize_seqscans TO"..., 37, MSG_NOSIGNAL, NULL, 0) = 37
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\10SET\0Z\0\0\0\5I", 16384, 0, NULL, NULL) = 15
+sendto(3, "Q\0\0\0\36SET statement_timeout = 0\0", 31, MSG_NOSIGNAL, NULL, 0) = 31
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\10SET\0Z\0\0\0\5I", 16384, 0, NULL, NULL) = 15
+sendto(3, "Q\0\0\0*SELECT pg_catalog.pg_is_in_"..., 43, MSG_NOSIGNAL, NULL, 0) = 43
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0*\0\1pg_is_in_recovery\0\0\0\0\0\0\0\0"..., 16384, 0, NULL, NULL) = 75
+sendto(3, "Q\0\0\0\nBEGIN\0", 11, MSG_NOSIGNAL, NULL, 0) = 11
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\nBEGIN\0Z\0\0\0\5T", 16384, 0, NULL, NULL) = 17
+sendto(3, "Q\0\0\0004SET TRANSACTION ISOLATION L"..., 53, MSG_NOSIGNAL, NULL, 0) = 53
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\10SET\0Z\0\0\0\5T", 16384, 0, NULL, NULL) = 15
+sendto(3, "Q\0\0\0!SET search_path = pg_catalo"..., 34, MSG_NOSIGNAL, NULL, 0) = 34
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\10SET\0Z\0\0\0\5T", 16384, 0, NULL, NULL) = 15
+sendto(3, "Q\0\0\0\207SELECT tableoid, oid, nspna"..., 136, MSG_NOSIGNAL, NULL, 0) = 136
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\204\0\5tableoid\0\0\0\n7\377\371\0\0\0\32\0\4\377\377\377\377"..., 16384, 0, NULL, NULL) = 579
+sendto(3, "Q\0\0\3\326SELECT c.tableoid, c.oid, c"..., 983, MSG_NOSIGNAL, NULL, 0) = 983
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\2}\0\26tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 16384, 0, NULL, NULL) = 16384
+brk(0xb16000)                           = 0xb16000
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "_character_set_applicability\0\0\0'"..., 32731, 0, NULL, NULL) = 19576
+brk(0xb37000)                           = 0xb37000
+sendto(3, "Q\0\0\0;LOCK TABLE public.auth_perm"..., 60, MSG_NOSIGNAL, NULL, 0) = 60
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0BLOCK TABLE public.auth_grou"..., 67, MSG_NOSIGNAL, NULL, 0) = 67
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0006LOCK TABLE public.auth_grou"..., 55, MSG_NOSIGNAL, NULL, 0) = 55
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0<LOCK TABLE public.auth_user"..., 61, MSG_NOSIGNAL, NULL, 0) = 61
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0FLOCK TABLE public.auth_user"..., 71, MSG_NOSIGNAL, NULL, 0) = 71
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0005LOCK TABLE public.auth_user"..., 54, MSG_NOSIGNAL, NULL, 0) = 54
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0?LOCK TABLE public.django_co"..., 64, MSG_NOSIGNAL, NULL, 0) = 64
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0:LOCK TABLE public.django_se"..., 59, MSG_NOSIGNAL, NULL, 0) = 59
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0007LOCK TABLE public.django_si"..., 56, MSG_NOSIGNAL, NULL, 0) = 56
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0<LOCK TABLE public.django_ad"..., 61, MSG_NOSIGNAL, NULL, 0) = 61
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0>LOCK TABLE public.mainlab_c"..., 63, MSG_NOSIGNAL, NULL, 0) = 63
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0009LOCK TABLE public.mainlab_g"..., 58, MSG_NOSIGNAL, NULL, 0) = 58
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0;LOCK TABLE public.mainlab_s"..., 60, MSG_NOSIGNAL, NULL, 0) = 60
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0;LOCK TABLE public.mainlab_c"..., 60, MSG_NOSIGNAL, NULL, 0) = 60
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0008LOCK TABLE public.mainlab_f"..., 57, MSG_NOSIGNAL, NULL, 0) = 57
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0008LOCK TABLE public.mainlab_l"..., 57, MSG_NOSIGNAL, NULL, 0) = 57
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0008LOCK TABLE public.mainlab_i"..., 57, MSG_NOSIGNAL, NULL, 0) = 57
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0BLOCK TABLE public.mainlab_a"..., 67, MSG_NOSIGNAL, NULL, 0) = 67
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0BLOCK TABLE public.mainlab_a"..., 67, MSG_NOSIGNAL, NULL, 0) = 67
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0BLOCK TABLE public.mainlab_a"..., 67, MSG_NOSIGNAL, NULL, 0) = 67
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0ELOCK TABLE public.mainlab_a"..., 70, MSG_NOSIGNAL, NULL, 0) = 70
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0<LOCK TABLE public.mainlab_a"..., 61, MSG_NOSIGNAL, NULL, 0) = 61
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0ALOCK TABLE public.mainlab_p"..., 66, MSG_NOSIGNAL, NULL, 0) = 66
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0ALOCK TABLE public.mainlab_p"..., 66, MSG_NOSIGNAL, NULL, 0) = 66
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0DLOCK TABLE public.mainlab_p"..., 69, MSG_NOSIGNAL, NULL, 0) = 69
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0;LOCK TABLE public.mainlab_p"..., 60, MSG_NOSIGNAL, NULL, 0) = 60
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0CLOCK TABLE public.mainlab_o"..., 68, MSG_NOSIGNAL, NULL, 0) = 68
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0CLOCK TABLE public.mainlab_o"..., 68, MSG_NOSIGNAL, NULL, 0) = 68
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0FLOCK TABLE public.mainlab_o"..., 71, MSG_NOSIGNAL, NULL, 0) = 71
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0=LOCK TABLE public.mainlab_o"..., 62, MSG_NOSIGNAL, NULL, 0) = 62
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0<LOCK TABLE public.mainlab_f"..., 61, MSG_NOSIGNAL, NULL, 0) = 61
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0BLOCK TABLE public.mainlab_g"..., 67, MSG_NOSIGNAL, NULL, 0) = 67
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0;LOCK TABLE public.mainlab_c"..., 60, MSG_NOSIGNAL, NULL, 0) = 60
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\17LOCK TABLE\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 22
+sendto(3, "Q\0\0\0\262SELECT x.tableoid, x.oid, x"..., 179, MSG_NOSIGNAL, NULL, 0) = 179
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\344\0\10tableoid\0\0\0\f\7\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 318
+sendto(3, "Q\0\0\1#SELECT tableoid, oid, prona"..., 292, MSG_NOSIGNAL, NULL, 0) = 292
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\23\0\ntableoid\0\0\0\4\347\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1371
+sendto(3, "Q\0\0\1\324SELECT tableoid, oid, typna"..., 469, MSG_NOSIGNAL, NULL, 0) = 469
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1f\0\rtableoid\0\0\0\4\337\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0\0041247\0\0\0\0041182\0\0\0\5_date\0\0\0\00211\0\0"..., 32760, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "ostgres\0\0\0\0042290\0\0\0\0042291\0\0\0\0010\0\0\0\4"..., 32716, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "D\0\0\0k\0\r\0\0\0\0041247\0\0\0\00512269\0\0\0\17card"..., 32768, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "2257\0\0\0\10postgres\0\0\0\0042290\0\0\0\0042291"..., 32715, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "ab_activity\0\0\0\0042200\0\0\0\veducatorl"..., 32735, 0, NULL, NULL) = 4968
+sendto(3, "Q\0\0\0\331SELECT tableoid, oid, lanna"..., 218, MSG_NOSIGNAL, NULL, 0) = 218
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\377\0\ttableoid\0\0\0\n4\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 359
+sendto(3, "Q\0\0\1/SELECT tableoid, oid, prona"..., 304, MSG_NOSIGNAL, NULL, 0) = 304
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\334\0\10tableoid\0\0\0\4\347\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 241
+sendto(3, "Q\0\0\0\245SELECT tableoid, oid, oprna"..., 166, MSG_NOSIGNAL, NULL, 0) = 166
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\244\0\6tableoid\0\0\0\n9\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "3\0\6\0\0\0\0042617\0\0\0\003592\0\0\0\1-\0\0\0\00211\0\0\0"..., 32764, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0\0\0041057\0\0\0\2<>\0\0\0\00211\0\0\0\10postgres"..., 32753, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0005\0\6\0\0\0\0042617\0\0\0\0041616\0\0\0\1=\0\0\0\00211"..., 32766, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0\2<=\0\0\0\00211\0\0\0\10postgres\0\0\0\0042378D"..., 32744, 0, NULL, NULL) = 5289
+brk(0xb60000)                           = 0xb60000
+sendto(3, "Q\0\0\0\213SELECT tableoid, oid, opcna"..., 140, MSG_NOSIGNAL, NULL, 0) = 140
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\212\0\5tableoid\0\0\0\n8\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 6524
+sendto(3, "Q\0\0\0\214SELECT tableoid, oid, opfna"..., 141, MSG_NOSIGNAL, NULL, 0) = 141
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\212\0\5tableoid\0\0\0\n\301\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 4012
+sendto(3, "Q\0\0\0\220SELECT tableoid, oid, prsna"..., 145, MSG_NOSIGNAL, NULL, 0) = 145
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\372\0\ttableoid\0\0\0\16\21\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 351
+sendto(3, "Q\0\0\0fSELECT tableoid, oid, tmpln"..., 103, MSG_NOSIGNAL, NULL, 0) = 103
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\252\0\6tableoid\0\0\0\16\264\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 475
+sendto(3, "Q\0\0\0\254SELECT tableoid, oid, dictn"..., 173, MSG_NOSIGNAL, NULL, 0) = 173
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\314\0\7tableoid\0\0\0\16\20\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1984
+sendto(3, "Q\0\0\0\230SELECT tableoid, oid, cfgna"..., 153, MSG_NOSIGNAL, NULL, 0) = 153
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\246\0\6tableoid\0\0\0\16\22\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1165
+sendto(3, "Q\0\0\1lSELECT tableoid, oid, fdwna"..., 365, MSG_NOSIGNAL, NULL, 0) = 365
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\335\0\10tableoid\0\0\0\t\30\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 242
+sendto(3, "Q\0\0\1@SELECT tableoid, oid, srvna"..., 321, MSG_NOSIGNAL, NULL, 0) = 321
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\361\0\ttableoid\0\0\0\5\211\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 262
+sendto(3, "Q\0\0\0\250SELECT oid, tableoid, (SELE"..., 169, MSG_NOSIGNAL, NULL, 0) = 169
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\262\0\6oid\0\0\0\3:\377\376\0\0\0\32\0\4\377\377\377\377\0\0tab"..., 32768, 0, NULL, NULL) = 199
+sendto(3, "Q\0\0\0\220SELECT tableoid, oid, colln"..., 145, MSG_NOSIGNAL, NULL, 0) = 145
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\214\0\5tableoid\0\0\0\r\200\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\00211\0\0\0\10postgresD\0\0\0<\0\5\0\0\0\0043456\0"..., 32733, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\5\0\0\0\0043456\0\0\0\00511432\0\0\0\nes_CL.utf"..., 32763, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "de\0\0\0\00211\0\0\0\10postgresD\0\0\0003\0\5\0\0\0\0043"..., 32728, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0\0\nmk_MK.utf8\0\0\0\00211\0\0\0\10postgres"..., 32744, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0\16so_SO.iso88591\0\0\0\00211\0\0\0\10postg"..., 32743, 0, NULL, NULL) = 6775
+brk(0xb82000)                           = 0xb82000
+sendto(3, "Q\0\0\0\216SELECT tableoid, oid, conna"..., 143, MSG_NOSIGNAL, NULL, 0) = 143
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\212\0\5tableoid\0\0\0\n/\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 8539
+sendto(3, "Q\0\0\0nSELECT tableoid, oid, casts"..., 111, MSG_NOSIGNAL, NULL, 0) = 111
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\307\0\7tableoid\0\0\0\n-\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0\0\0042605\0\0\0\00510929\0\0\0\0041114\0\0\0\004111"..., 32761, 0, NULL, NULL) = 2799
+sendto(3, "Q\0\0\0000SELECT inhrelid, inhparent "..., 49, MSG_NOSIGNAL, NULL, 0) = 49
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0=\0\2inhrelid\0\0\0\n3\0\1\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 82
+sendto(3, "Q\0\0\0xSELECT tableoid, oid, rulen"..., 121, MSG_NOSIGNAL, NULL, 0) = 121
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\302\0\7tableoid\0\0\0\n:\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 6188
+sendto(3, "Q\0\0\0\212SELECT classid, objid, refc"..., 139, MSG_NOSIGNAL, NULL, 0) = 139
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0p\0\4classid\0\0\0\n0\0\1\0\0\0\32\0\4\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 297
+sendto(3, "Q\0\0\0)SET search_path = public, p"..., 42, MSG_NOSIGNAL, NULL, 0) = 42
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\10SET\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 15
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 867
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 200
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 741
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 207
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 651
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 195
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 735
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 201
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 740
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 211
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 1628
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 194
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 877
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 204
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 782
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 762
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 196
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 1269
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 201
+sendto(3, "Q\0\0\0\313SELECT tableoid, oid, conna"..., 204, MSG_NOSIGNAL, NULL, 0) = 204
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\207\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 253
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 654
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 203
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 849
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 198
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 750
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 200
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 846
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 200
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 859
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 197
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 859
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 197
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 865
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 197
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 738
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 207
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 738
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 207
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 738
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 207
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 741
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 210
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 1255
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 201
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 737
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 206
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 737
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 206
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 740
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 209
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 1353
+brk(0xba3000)                           = 0xba3000
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 200
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 739
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 208
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 739
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 208
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 742
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 211
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 985
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 202
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 752
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 201
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 752
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 207
+sendto(3, "Q\0\0\2.SELECT a.attnum, a.attname,"..., 559, MSG_NOSIGNAL, NULL, 0) = 559
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\261\0\17attnum\0\0\0\4\341\0\6\0\0\0\25\0\2\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 1159
+sendto(3, "Q\0\0\0\224SELECT tableoid, oid, adnum"..., 149, MSG_NOSIGNAL, NULL, 0) = 149
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0g\0\4tableoid\0\0\0\n,\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 200
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1241
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1509
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1079
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1377
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1557
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1100
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1021
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1120
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 676
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1092
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 704
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 883
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 878
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 884
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 680
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 680
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 680
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1485
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1485
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1485
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1551
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 696
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1463
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1463
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1529
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 692
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1507
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1507
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1573
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 700
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 696
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 720
+sendto(3, "Q\0\0\2\346SELECT t.tableoid, t.oid, t"..., 743, MSG_NOSIGNAL, NULL, 0) = 743
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\1\274\0\20tableoid\0\0\0\4\353\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 1277
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 322
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 469
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 155
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 445
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 470
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 155
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 155
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 473
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 155
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 321
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 306
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 312
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 155
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 155
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 155
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 466
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 466
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 466
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 478
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 155
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 462
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 462
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 474
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 155
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 470
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 470
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 482
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 155
+sendto(3, "Q\0\0\0\266SELECT tableoid, oid, conna"..., 183, MSG_NOSIGNAL, NULL, 0) = 183
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\206\0\5tableoid\0\0\0\n.\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 635
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0\340SELECT tgname, tgfoid::pg_c"..., 225, MSG_NOSIGNAL, NULL, 0) = 225
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\236\0\6tgname\0\0\0\n<\0\2\0\0\0\23\0@\377\377\377\377\0\0"..., 32768, 0, NULL, NULL) = 179
+sendto(3, "Q\0\0\0!SET search_path = pg_catalo"..., 34, MSG_NOSIGNAL, NULL, 0) = 34
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\10SET\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 15
+sendto(3, "Q\0\0\0\177SELECT oid, (SELECT rolname"..., 128, MSG_NOSIGNAL, NULL, 0) = 128
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0O\0\3oid\0\0\0\v\263\377\376\0\0\0\32\0\4\377\377\377\377\0\0rol"..., 32768, 0, NULL, NULL) = 100
+sendto(3, "Q\0\0\0}SELECT classid, objid, refc"..., 126, MSG_NOSIGNAL, NULL, 0) = 126
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\212\0\5classid\0\0\0\n0\0\1\0\0\0\32\0\4\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0-\0\5\0\0\0\0041247\0\0\0\00534731\0\0\0\0041259\0\0\0"..., 32765, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0\0\0041259\0\0\0\00512320\0\0\0\0041247\0\0\0\005122"..., 32761, 0, NULL, NULL) = 8192
+brk(0xbc4000)                           = 0xbc4000
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "1259\0\0\0\00512368\0\0\0\0041247\0\0\0\00512272\0\0"..., 32757, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0\0\00512418\0\0\0\0041247\0\0\0\00512272\0\0\0\1nD"..., 32753, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "12486\0\0\0\0041247\0\0\0\00512272\0\0\0\1nD\0\0\0-"..., 32749, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0042200\0\0\0\1nD\0\0\0-\0\5\0\0\0\0041259\0\0\0\005349"..., 32733, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "D\0\0\0-\0\5\0\0\0\0042606\0\0\0\00534633\0\0\0\0041259"..., 32768, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "-\0\5\0\0\0\0042607\0\0\0\00512113\0\0\0\0041255\0\0\0\5"..., 32764, 0, NULL, NULL) = 8192
+brk(0xbe5000)                           = 0xbe5000
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0\0042618\0\0\0\00511051\0\0\0\0041259\0\0\0\0051103"..., 32760, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "618\0\0\0\00512310\0\0\0\0041259\0\0\0\00512308\0\0\0"..., 32756, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0\00512454\0\0\0\0041259\0\0\0\00512452\0\0\0\1nD\0"..., 32752, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "4788\0\0\0\0042606\0\0\0\00534786\0\0\0\1iD\0\0\0-\0"..., 32748, 0, NULL, NULL) = 4971
+brk(0xc06000)                           = 0xc06000
+sendto(3, "Q\0\0\1cSELECT tableoid, oid, (SELE"..., 356, MSG_NOSIGNAL, NULL, 0) = 356
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\372\0\ttableoid\0\0\0\4\356\377\371\0\0\0\32\0\4\377\377\377\377"..., 32768, 0, NULL, NULL) = 354
+sendto(3, "Q\0\0\0vSELECT description, classoi"..., 119, MSG_NOSIGNAL, NULL, 0) = 119
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0s\0\4description\0\0\0\n1\0\4\0\0\0\31\377\377\377"..., 32768, 0, NULL, NULL) = 16384
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, ":\0\4\0\0\0\34implementation of > opera"..., 32764, 0, NULL, NULL) = 16384
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\4\0\0\0\34implementation of = operat"..., 32763, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0\0\0010D\0\0\0L\0\4\0\0\0-promote groups o"..., 32701, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "e difference from today preservi"..., 32754, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\tcotangent\0\0\0\0041255\0\0\0\0041607\0\0\0\0010"..., 32759, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\4\0\0\0(convert text to timestamp "..., 32763, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0\0<\0\4\0\0\0\35implementation of || o"..., 32767, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0042141\0\0\0\0010D\0\0\0J\0\4\0\0\0+minimum val"..., 32707, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\3I/O\0\0\0\0041255\0\0\0\0042312\0\0\0\0010D\0\0\0\"\0\4"..., 32758, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "perator\0\0\0\0041255\0\0\0\0042523\0\0\0\0010D\0\0\0"..., 32736, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0\0042768\0\0\0\0010D\0\0\0^\0\4\0\0\0?statistic"..., 32725, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "apshot\0\0\0\0041255\0\0\0\0042944\0\0\0\0010D\0\0\0003"..., 32743, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "uence parameters, for use by inf"..., 32754, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0\0043736\0\0\0\0010D\0\0\0\"\0\4\0\0\0\3I/O\0\0\0\00412"..., 32745, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0041255\0\0\0\00512150\0\0\0\0010D\0\0\0O\0\4\0\0\0/i"..., 32708, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "to UTF8\0\0\0\0042607\0\0\0\00512165\0\0\0\0010D\0\0"..., 32738, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "\0\0\0042617\0\0\0\003566\0\0\0\0010D\0\0\0'\0\4\0\0\0\tno"..., 32751, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "gular expression, case-sensitive"..., 32740, 0, NULL, NULL) = 8192
+brk(0xc27000)                           = 0xc27000
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, ")matches LIKE expression, case-i"..., 32758, 0, NULL, NULL) = 8192
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "70\0\0\0\0010D\0\0\0009\0\4\0\0\0\32deprecated, us"..., 32717, 0, NULL, NULL) = 5210
+sendto(3, "Q\0\0\0wSELECT label, provider, cla"..., 120, MSG_NOSIGNAL, NULL, 0) = 120
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\210\0\5label\0\0\0\16\f\0\5\0\0\0\31\377\377\377\377\377\377\0\0p"..., 32768, 0, NULL, NULL) = 157
+sendto(3, "Q\0\0\0)SET search_path = public, p"..., 42, MSG_NOSIGNAL, NULL, 0) = 42
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "C\0\0\0\10SET\0Z\0\0\0\5T", 32768, 0, NULL, NULL) = 15
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\261SELECT sequence_name, start"..., 434, MSG_NOSIGNAL, NULL, 0) = 434
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\206\330\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 290
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\275SELECT sequence_name, start"..., 446, MSG_NOSIGNAL, NULL, 0) = 446
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\206\311\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 302
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\266SELECT sequence_name, start"..., 439, MSG_NOSIGNAL, NULL, 0) = 439
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\206\277\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 295
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\267SELECT sequence_name, start"..., 440, MSG_NOSIGNAL, NULL, 0) = 440
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\206\347\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 296
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\260SELECT sequence_name, start"..., 433, MSG_NOSIGNAL, NULL, 0) = 433
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\207\5\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 289
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\301SELECT sequence_name, start"..., 450, MSG_NOSIGNAL, NULL, 0) = 450
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\206\366\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 306
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\267SELECT sequence_name, start"..., 440, MSG_NOSIGNAL, NULL, 0) = 440
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\2078\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 296
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\272SELECT sequence_name, start"..., 443, MSG_NOSIGNAL, NULL, 0) = 443
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\207\31\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 299
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\262SELECT sequence_name, start"..., 435, MSG_NOSIGNAL, NULL, 0) = 435
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\2070\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 291
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\300SELECT sequence_name, start"..., 449, MSG_NOSIGNAL, NULL, 0) = 449
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\207\310\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 305
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\275SELECT sequence_name, start"..., 446, MSG_NOSIGNAL, NULL, 0) = 446
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\207\233\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 302
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\267SELECT sequence_name, start"..., 440, MSG_NOSIGNAL, NULL, 0) = 440
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\207\327\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 296
+brk(0xc48000)                           = 0xc48000
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\275SELECT sequence_name, start"..., 446, MSG_NOSIGNAL, NULL, 0) = 446
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\207\271\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 302
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\275SELECT sequence_name, start"..., 446, MSG_NOSIGNAL, NULL, 0) = 446
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\207\252\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 302
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\266SELECT sequence_name, start"..., 439, MSG_NOSIGNAL, NULL, 0) = 439
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\207p\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 295
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\266SELECT sequence_name, start"..., 439, MSG_NOSIGNAL, NULL, 0) = 439
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\210\232\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 295
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\271SELECT sequence_name, start"..., 442, MSG_NOSIGNAL, NULL, 0) = 442
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\207N\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 298
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\263SELECT sequence_name, start"..., 436, MSG_NOSIGNAL, NULL, 0) = 436
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\207}\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 292
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\267SELECT sequence_name, start"..., 440, MSG_NOSIGNAL, NULL, 0) = 440
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\210\204\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 296
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\264SELECT sequence_name, start"..., 437, MSG_NOSIGNAL, NULL, 0) = 437
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\207V\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 293
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\275SELECT sequence_name, start"..., 446, MSG_NOSIGNAL, NULL, 0) = 446
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\210\217\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 302
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\263SELECT sequence_name, start"..., 436, MSG_NOSIGNAL, NULL, 0) = 436
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\207\223\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 292
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\263SELECT sequence_name, start"..., 436, MSG_NOSIGNAL, NULL, 0) = 436
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\207\210\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 292
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\301SELECT sequence_name, start"..., 450, MSG_NOSIGNAL, NULL, 0) = 450
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\210[\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 306
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\276SELECT sequence_name, start"..., 447, MSG_NOSIGNAL, NULL, 0) = 447
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\210=\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 303
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\270SELECT sequence_name, start"..., 441, MSG_NOSIGNAL, NULL, 0) = 441
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\210j\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 297
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\276SELECT sequence_name, start"..., 447, MSG_NOSIGNAL, NULL, 0) = 447
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\210L\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 303
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\277SELECT sequence_name, start"..., 448, MSG_NOSIGNAL, NULL, 0) = 448
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\210\24\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 304
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\274SELECT sequence_name, start"..., 445, MSG_NOSIGNAL, NULL, 0) = 445
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\207\366\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 301
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\266SELECT sequence_name, start"..., 439, MSG_NOSIGNAL, NULL, 0) = 439
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\210#\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 295
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\274SELECT sequence_name, start"..., 445, MSG_NOSIGNAL, NULL, 0) = 445
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\210\5\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 301
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\1\266SELECT sequence_name, start"..., 439, MSG_NOSIGNAL, NULL, 0) = 439
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0\325\0\7sequence_name\0\0\0\207c\0\1\0\0\0\23\0"..., 32768, 0, NULL, NULL) = 295
+sendto(3, "Q\0\0\0\215SELECT attname, attacl FROM"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0009\0\2attname\0\0\0\4\341\0\2\0\0\0\23\0@\377\377\377\377\0"..., 32768, 0, NULL, NULL) = 78
+sendto(3, "Q\0\0\0008SELECT last_value, is_calle"..., 57, MSG_NOSIGNAL, NULL, 0) = 57
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\206\330\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0DSELECT last_value, is_calle"..., 69, MSG_NOSIGNAL, NULL, 0) = 69
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\206\311\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0=SELECT last_value, is_calle"..., 62, MSG_NOSIGNAL, NULL, 0) = 62
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\206\277\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 102
+sendto(3, "Q\0\0\0>SELECT last_value, is_calle"..., 63, MSG_NOSIGNAL, NULL, 0) = 63
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\206\347\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0007SELECT last_value, is_calle"..., 56, MSG_NOSIGNAL, NULL, 0) = 56
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\207\5\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0HSELECT last_value, is_calle"..., 73, MSG_NOSIGNAL, NULL, 0) = 73
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\206\366\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0>SELECT last_value, is_calle"..., 63, MSG_NOSIGNAL, NULL, 0) = 63
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\2078\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0ASELECT last_value, is_calle"..., 66, MSG_NOSIGNAL, NULL, 0) = 66
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\207\31\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 102
+sendto(3, "Q\0\0\0009SELECT last_value, is_calle"..., 58, MSG_NOSIGNAL, NULL, 0) = 58
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\2070\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0GSELECT last_value, is_calle"..., 72, MSG_NOSIGNAL, NULL, 0) = 72
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\207\310\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0DSELECT last_value, is_calle"..., 69, MSG_NOSIGNAL, NULL, 0) = 69
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\207\233\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0>SELECT last_value, is_calle"..., 63, MSG_NOSIGNAL, NULL, 0) = 63
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\207\327\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0DSELECT last_value, is_calle"..., 69, MSG_NOSIGNAL, NULL, 0) = 69
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\207\271\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0DSELECT last_value, is_calle"..., 69, MSG_NOSIGNAL, NULL, 0) = 69
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\207\252\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0=SELECT last_value, is_calle"..., 62, MSG_NOSIGNAL, NULL, 0) = 62
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\207p\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0=SELECT last_value, is_calle"..., 62, MSG_NOSIGNAL, NULL, 0) = 62
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\210\232\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0@SELECT last_value, is_calle"..., 65, MSG_NOSIGNAL, NULL, 0) = 65
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\207N\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0:SELECT last_value, is_calle"..., 59, MSG_NOSIGNAL, NULL, 0) = 59
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\207}\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0>SELECT last_value, is_calle"..., 63, MSG_NOSIGNAL, NULL, 0) = 63
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\210\204\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0;SELECT last_value, is_calle"..., 60, MSG_NOSIGNAL, NULL, 0) = 60
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\207V\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0DSELECT last_value, is_calle"..., 69, MSG_NOSIGNAL, NULL, 0) = 69
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\210\217\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0:SELECT last_value, is_calle"..., 59, MSG_NOSIGNAL, NULL, 0) = 59
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\207\223\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0:SELECT last_value, is_calle"..., 59, MSG_NOSIGNAL, NULL, 0) = 59
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\207\210\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0HSELECT last_value, is_calle"..., 73, MSG_NOSIGNAL, NULL, 0) = 73
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\210[\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0ESELECT last_value, is_calle"..., 70, MSG_NOSIGNAL, NULL, 0) = 70
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\210=\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0?SELECT last_value, is_calle"..., 64, MSG_NOSIGNAL, NULL, 0) = 64
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\210j\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0ESELECT last_value, is_calle"..., 70, MSG_NOSIGNAL, NULL, 0) = 70
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\210L\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0FSELECT last_value, is_calle"..., 71, MSG_NOSIGNAL, NULL, 0) = 71
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\210\24\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0CSELECT last_value, is_calle"..., 68, MSG_NOSIGNAL, NULL, 0) = 68
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\207\366\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0=SELECT last_value, is_calle"..., 62, MSG_NOSIGNAL, NULL, 0) = 62
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\210#\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0CSELECT last_value, is_calle"..., 68, MSG_NOSIGNAL, NULL, 0) = 68
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\210\5\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+sendto(3, "Q\0\0\0=SELECT last_value, is_calle"..., 62, MSG_NOSIGNAL, NULL, 0) = 62
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "T\0\0\0?\0\2last_value\0\0\0\207c\0\2\0\0\0\24\0\10\377\377"..., 32768, 0, NULL, NULL) = 101
+brk(0xc69000)                           = 0xc69000
+open("dump_test.sql", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+fstat(4, {st_mode=S_IFREG|0664, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb24a88d000
+write(4, "--\n-- PostgreSQL database dump\n-"..., 4096) = 4096
+write(4, "r_groups_id_seq OWNED BY auth_us"..., 4096) = 4096
+write(4, "e_id_seq OWNED BY django_site.id"..., 4096) = 4096
+write(4, "_seq OWNED BY mainlab_activity_l"..., 4096) = 4096
+write(4, "ing(200) NOT NULL,\n    number in"..., 4096) = 4096
+write(4, "_files; Type: TABLE; Schema: pub"..., 4096) = 4096
+write(4, "_files.id;\n\n\n--\n-- Name: mainlab"..., 4096) = 4096
+sendto(3, "Q\0\0\0001COPY public.auth_group (id,"..., 50, MSG_NOSIGNAL, NULL, 0) = 50
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\v\0\0\2\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z\0\0"..., 32768, 0, NULL, NULL) = 35
+write(4, "ET DEFAULT nextval('mainlab_acti"..., 4096) = 4096
+sendto(3, "Q\0\0\0PCOPY public.auth_group_perm"..., 81, MSG_NOSIGNAL, NULL, 0) = 81
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z"..., 32768, 0, NULL, NULL) = 37
+sendto(3, "Q\0\0\0QCOPY public.auth_permission"..., 82, MSG_NOSIGNAL, NULL, 0) = 82
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\17\0\0\4\0\0\0\0\0\0\0\0d\0\0\0*1\tCan add p"..., 32768, 0, NULL, NULL) = 2611
+sendto(3, "Q\0\0\0\230COPY public.auth_user (id, "..., 153, MSG_NOSIGNAL, NULL, 0) = 153
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\35\0\0\v\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0d\0"..., 32768, 0, NULL, NULL) = 247
+sendto(3, "Q\0\0\0DCOPY public.auth_user_group"..., 69, MSG_NOSIGNAL, NULL, 0) = 69
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z"..., 32768, 0, NULL, NULL) = 37
+sendto(3, "Q\0\0\0SCOPY public.auth_user_user_"..., 84, MSG_NOSIGNAL, NULL, 0) = 84
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z"..., 32768, 0, NULL, NULL) = 37
+write(4, "A; Schema: public; Owner: educat"..., 4096) = 4096
+sendto(3, "Q\0\0\0\215COPY public.django_admin_lo"..., 142, MSG_NOSIGNAL, NULL, 0) = 142
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\27\0\0\10\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0c\0\0\0\4C\0\0"..., 32768, 0, NULL, NULL) = 47
+sendto(3, "Q\0\0\0LCOPY public.django_content_"..., 77, MSG_NOSIGNAL, NULL, 0) = 77
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\17\0\0\4\0\0\0\0\0\0\0\0d\0\0\0!1\tpermissio"..., 32768, 0, NULL, NULL) = 673
+sendto(3, "Q\0\0\0SCOPY public.django_session "..., 84, MSG_NOSIGNAL, NULL, 0) = 84
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0d\0\0\0\3708mte5ts0b5mv3"..., 32768, 0, NULL, NULL) = 533
+sendto(3, "Q\0\0\0:COPY public.django_site (id"..., 59, MSG_NOSIGNAL, NULL, 0) = 59
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0d\0\0\0\0361\texample.com"..., 32768, 0, NULL, NULL) = 68
+sendto(3, "Q\0\0\0yCOPY public.mainlab_activit"..., 122, MSG_NOSIGNAL, NULL, 0) = 122
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\27\0\0\10\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0c\0\0\0\4C\0\0"..., 32768, 0, NULL, NULL) = 47
+sendto(3, "Q\0\0\0SCOPY public.mainlab_activit"..., 84, MSG_NOSIGNAL, NULL, 0) = 84
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z"..., 32768, 0, NULL, NULL) = 37
+sendto(3, "Q\0\0\0MCOPY public.mainlab_activit"..., 78, MSG_NOSIGNAL, NULL, 0) = 78
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z"..., 32768, 0, NULL, NULL) = 37
+sendto(3, "Q\0\0\0MCOPY public.mainlab_activit"..., 78, MSG_NOSIGNAL, NULL, 0) = 78
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z"..., 32768, 0, NULL, NULL) = 37
+sendto(3, "Q\0\0\0MCOPY public.mainlab_activit"..., 78, MSG_NOSIGNAL, NULL, 0) = 78
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z"..., 32768, 0, NULL, NULL) = 37
+write(4, "('auth_user_user_permissions_id_"..., 4096) = 4096
+sendto(3, "Q\0\0\0KCOPY public.mainlab_chapter"..., 76, MSG_NOSIGNAL, NULL, 0) = 76
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\17\0\0\4\0\0\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0"..., 32768, 0, NULL, NULL) = 39
+sendto(3, "Q\0\0\0uCOPY public.mainlab_comment"..., 118, MSG_NOSIGNAL, NULL, 0) = 118
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\25\0\0\7\0\0\0\0\0\0\0\0\0\0\0\0\0\0c\0\0\0\4C\0\0\0\v"..., 32768, 0, NULL, NULL) = 45
+sendto(3, "Q\0\0\0:COPY public.mainlab_curricu"..., 59, MSG_NOSIGNAL, NULL, 0) = 59
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\v\0\0\2\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z\0\0"..., 32768, 0, NULL, NULL) = 35
+sendto(3, "Q\0\0\0FCOPY public.mainlab_file (i"..., 71, MSG_NOSIGNAL, NULL, 0) = 71
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\17\0\0\4\0\0\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0"..., 32768, 0, NULL, NULL) = 39
+sendto(3, "Q\0\0\0FCOPY public.mainlab_foldabl"..., 71, MSG_NOSIGNAL, NULL, 0) = 71
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z"..., 32768, 0, NULL, NULL) = 37
+sendto(3, "Q\0\0\0NCOPY public.mainlab_grade ("..., 79, MSG_NOSIGNAL, NULL, 0) = 79
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\17\0\0\4\0\0\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0"..., 32768, 0, NULL, NULL) = 39
+sendto(3, "Q\0\0\0LCOPY public.mainlab_graphor"..., 77, MSG_NOSIGNAL, NULL, 0) = 77
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z"..., 32768, 0, NULL, NULL) = 37
+sendto(3, "Q\0\0\0@COPY public.mainlab_item (i"..., 65, MSG_NOSIGNAL, NULL, 0) = 65
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\17\0\0\4\0\0\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0"..., 32768, 0, NULL, NULL) = 39
+sendto(3, "Q\0\0\0FCOPY public.mainlab_link (i"..., 71, MSG_NOSIGNAL, NULL, 0) = 71
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\17\0\0\4\0\0\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0"..., 32768, 0, NULL, NULL) = 39
+sendto(3, "Q\0\0\0fCOPY public.mainlab_organiz"..., 103, MSG_NOSIGNAL, NULL, 0) = 103
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\21\0\0\5\0\0\0\0\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY"..., 32768, 0, NULL, NULL) = 41
+sendto(3, "Q\0\0\0UCOPY public.mainlab_organiz"..., 86, MSG_NOSIGNAL, NULL, 0) = 86
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z"..., 32768, 0, NULL, NULL) = 37
+sendto(3, "Q\0\0\0OCOPY public.mainlab_organiz"..., 80, MSG_NOSIGNAL, NULL, 0) = 80
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z"..., 32768, 0, NULL, NULL) = 37
+write(4, "_chapter; Type: TABLE DATA; Sche"..., 4096) = 4096
+sendto(3, "Q\0\0\0OCOPY public.mainlab_organiz"..., 80, MSG_NOSIGNAL, NULL, 0) = 80
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z"..., 32768, 0, NULL, NULL) = 37
+sendto(3, "Q\0\0\0\206COPY public.mainlab_project"..., 135, MSG_NOSIGNAL, NULL, 0) = 135
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\31\0\0\t\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0c\0\0\0\4C"..., 32768, 0, NULL, NULL) = 49
+sendto(3, "Q\0\0\0QCOPY public.mainlab_project"..., 82, MSG_NOSIGNAL, NULL, 0) = 82
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z"..., 32768, 0, NULL, NULL) = 37
+sendto(3, "Q\0\0\0KCOPY public.mainlab_project"..., 76, MSG_NOSIGNAL, NULL, 0) = 76
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z"..., 32768, 0, NULL, NULL) = 37
+sendto(3, "Q\0\0\0KCOPY public.mainlab_project"..., 76, MSG_NOSIGNAL, NULL, 0) = 76
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z"..., 32768, 0, NULL, NULL) = 37
+sendto(3, "Q\0\0\0ACOPY public.mainlab_subject"..., 66, MSG_NOSIGNAL, NULL, 0) = 66
+poll([{fd=3, events=POLLIN|POLLERR}], 1, -1) = 1 ([{fd=3, revents=POLLIN}])
+recvfrom(3, "H\0\0\0\r\0\0\3\0\0\0\0\0\0c\0\0\0\4C\0\0\0\vCOPY 0\0Z"..., 32768, 0, NULL, NULL) = 37
+write(4, "ks (id, organizer_id, link_id) F"..., 4096) = 4096
+write(4, "uth_user_user_permissions_pkey P"..., 4096) = 4096
+write(4, "b_comment\n    ADD CONSTRAINT mai"..., 4096) = 4096
+write(4, "ab_project_files_project_id_file"..., 4096) = 4096
+write(4, "_files_activity_id; Type: INDEX;"..., 4096) = 4096
+write(4, "NDEX mainlab_project_files_file_"..., 4096) = 4096
+write(4, " Type: FK CONSTRAINT; Schema: pu"..., 4096) = 4096
+write(4, "r: educatorlab\n--\n\nALTER TABLE O"..., 2949) = 2949
+close(4)                                = 0
+munmap(0x7fb24a88d000, 4096)            = 0
+sendto(3, "X\0\0\0\4", 5, MSG_NOSIGNAL, NULL, 0) = 5
+close(3)                                = 0
+exit_group(0)                           = ?

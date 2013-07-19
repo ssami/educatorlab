@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<div class="resourceContent"> 
+		<h4>{{foldable.title|safe}}</h4> <br>
+		<h5>Instructions:</h5>
+		{{foldable.instructions|safe}} <br>
+		<h5>Images:</h5>
+		<a class='attachment' target='_blank' href='{{foldable.image.url}}'>
+                	<img src='{{foldable.image.url}}'>
+	                <div class='attText'>{{foldable.title}}</div>
+                </a>
+
+
+	</div> 
+
+{% endblock content %}
