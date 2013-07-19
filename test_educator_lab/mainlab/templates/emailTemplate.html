@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block script %}
+	<script type="text/javascript" src="/static/tiny_mce/tiny_mce.js"></script>
+	<script type="text/javascript">
+	$( document ).ready(function() {
+		tinyMCE.init({
+			mode: "textareas",
+			theme: "simple"
+		});
+	});
+	</script>
+{% endblock script %}
+
+{% block content %}
+
+	<div style="padding:50px 100px;">
+		<h4>Send Email</h4><br>
+		
+		<form method="post" action="/sendEmail/">{% csrf_token %}
+		
+			<input type="hidden" name="email" value="{{email}}">
+		
+			<h5>Subject:</h5>
+			{% if publish %}
+			<input type="text" name="subject" value="Congratulations!" >
+			{% else %}
+			<input type="text" name="subject" value="Thank you for your submission" >
+			{% endif %}
+		
+			<h5>Message:</h5>
+			
+			{% if publish %}
+			<textarea name="message" style="width:100%">
+				Congratulations {{personName}}! <br><br>
+				Your resource has now been published! You can access it here: {{url}}. If you find any issues with the resource that's been published, feel free to contact us at educatorlab@gmail.com. <br><br>
+				Once again, thank you for your submission. The Educator Lab needs the support of dedicated teachers such as yourselves to grow its resources. We'd love to hear from you again! To submit another resource, just click here: http://educatorlab.com/submit_resource/<br><br>
+				Thanks for your time!<br><br>
+				{{managerName}}<br>
+				The Educator Lab Team
+			</textarea><br>
+			{% else %}
+			<textarea name="message" style="width:100%">
+				Thank you for your submission, {{personName}}. <br><br>
+				Unfortunately, we couldn't publish your resource at this time. We'll be getting in touch with you soon to work on improving the resource.  <br><br>
+				The Educator Lab appreciates your time and efforts, and we look forward to working with you again. <br><br>
+				Thanks,<br><br>
+				{{managerName}}<br>
+				The Educator Lab Team
+			</textarea><br>
+			{% endif %}
+			
+			
+			<div class="text-right">
+				<input type="submit" class="btn btn-danger" name="sendemail" value="Send Email" style="margin-right:10px;"/>
+				<a href="/manager/" class="btn">Don't Send</a>
+			</div>
+	
+		</form>
+	
+	<br><br><br></div>
+
+	
+{% endblock content %}

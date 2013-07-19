@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3 style="padding-top:20px;padding-left:50px;">Content Manager</h3>
+<div style="padding:20px 50px;"> 
+	<h4> Pending Activities </h4><br>
+	<table class="table table-striped">
+	<tr>
+		<td> Title </td>
+		<td> Parameters </td>
+		<td> Time Submitted </td>
+		<td> Contributed by </td>
+	</tr>
+	{% for a in pendingActivities %}
+	<tr>
+		<td><a href="{{site_url}}activityEdit/i={{a.id}}/">{{a.title|truncatewords:6}}</a></td>
+		<td>{{a.curricula}}, {{a.grades}}, {{a.subjects}}</td>
+		<td>{{a.timeCreated}}</td>
+		<td>{{a.author}}</td>
+	</tr>
+	{% endfor %}
+	</table>
+		
+	
+	<h4> Pending Projects </h4><br>
+	<table class="table table-striped">
+	<tr>
+		<td> Title </td>
+		<td> Parameters </td>
+		<td> Time Submitted </td>
+		<td> Contributed by </td>
+	</tr>
+	{% for p in pendingProjects %}
+	<tr>
+		<td><a href="{{site_url}}projectEdit/i={{p.id}}/">{{p.title|truncatewords:6}}</a></td>
+		<td>{{p.curricula}}, {{p.grades}}, {{p.subjects}}</td>
+		<td>{{p.timeCreated}}</td>
+		<td>{{p.author}}</td>
+	</tr>
+	{% endfor %}
+	</table>
+	
+	<br><br>
+	
+	<h4> Published Activities </h4><br>
+	<table class="table table-striped">
+	<tr>
+		<td> Title </td>
+		<td> Parameters </td>
+		<td> Time Submitted </td>
+		<td> Contributed by </td>
+	</tr>
+	{% for a in publishedActivities %}
+	<tr>
+		<td><a href="{{site_url}}activityEdit/i={{a.id}}/">{{a.title|truncatewords:6}}</a></td>
+		<td>{{a.curricula}}, {{a.grades}}, {{a.subjects}}</td>
+		<td>{{a.timeCreated}}</td>
+		<td>{{a.author}}</td>
+	</tr>
+	{% endfor %}
+	</table>
+		
+	
+	<h4> Published Projects </h4><br>
+	<table class="table table-striped">
+	<tr>
+		<td> Title </td>
+		<td> Parameters </td>
+		<td> Time Submitted </td>
+		<td> Contributed by </td>
+	</tr>
+	{% for p in publishedProjects %}
+	<tr>
+		<td><a href="{{site_url}}projectEdit/i={{p.id}}/">{{p.title|truncatewords:6}}</a></td>
+		<td>{{p.curricula}}, {{p.grades}}, {{p.subjects}}</td>
+		<td>{{p.timeCreated}}</td>
+		<td>{{p.author}}</td>
+	</tr>
+	{% endfor %}
+	</table>
+</div>
+{% endblock content %}

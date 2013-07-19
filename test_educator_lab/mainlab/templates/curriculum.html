@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% if titleTag != "" %}
+	<title>{{titleTag}}</title>
+{% else %}
+	<title> {{curriculum}} Resources | Educator Lab </title>
+{% endif %}
+{% endblock title %}
+
+
+{% block content %}
+
+<ul class="breadcrumb">
+  <li class="active">{{curriculum}}</li>
+</ul>
+
+<div class="container-fluid"><div class="row-fluid">
+	<div class="span8 offset2">
+		<div class="mainListHead">Select Grade in {{curriculum}}</div>
+		<hr>
+		<div style="padding:0px 50px;"><table class="table">
+		{% for g in grades %}
+			<tr>
+				<td style="border:none;"><a href="{{site_url}}grade/i={{g.id}}/" class="mainLink"> Grade {{g.title}} </a></td>
+			</tr>
+		{% endfor %}
+		</table></div>
+	</div>
+</div></div>
+
+{% endblock content %}
